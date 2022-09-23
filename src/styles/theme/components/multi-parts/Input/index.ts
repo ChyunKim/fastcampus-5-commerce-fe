@@ -10,7 +10,6 @@ export type InputThemeType = ChakraMultiPartComponentType<typeof parts>;
 export const Input: InputThemeType = {
   parts,
   sizes,
-  variants,
   baseStyle: {
     field: {
       width: '100%',
@@ -25,5 +24,17 @@ export const Input: InputThemeType = {
   defaultProps: {
     size: 'md',
     variant: 'outline',
+  },
+  variants: {
+    formstyled: {
+      field: {
+        border: '1px solid',
+        borderRadius: '100px',
+        h: '40px',
+        _invalid: {
+          borderColor: 'warning.500',
+        },
+      },
+    },
   },
 };

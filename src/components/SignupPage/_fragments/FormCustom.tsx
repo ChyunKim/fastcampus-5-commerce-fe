@@ -51,7 +51,11 @@ const FormCustom = ({
       )}
       {children}
       {isShowErrorText && (
-        <FormErrorMessage fontSize="12px" color="warning" {...errorTextProps}>
+        <FormErrorMessage
+          fontSize="12px"
+          color="warning.500"
+          {...errorTextProps}
+        >
           {errorText}
         </FormErrorMessage>
       )}

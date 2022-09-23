@@ -95,6 +95,14 @@ export const Button: ComponentSingleStyleConfig = {
   },
   variants: {
     solid: variantSolid,
+    orange: {
+      bg: 'primary.500',
+      w: '100%',
+      h: '50px',
+      color: 'white',
+      borderRadius: '25px',
+      fontSize: '16px',
+    },
   },
   sizes: {
     lg: {
