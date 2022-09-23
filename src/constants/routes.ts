@@ -27,5 +27,6 @@ export const ROUTES = {
   login: {
     MAIN: '/login',
     signup: '/login/signup',
+    signupsuccess: 'login/signupsuccess',
   },
 } as const;
