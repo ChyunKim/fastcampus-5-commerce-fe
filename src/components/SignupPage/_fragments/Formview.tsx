@@ -10,6 +10,7 @@ import {
 } from '@chakra-ui/react';
 
 import { FormProps } from '../_hooks/useSignForm';
+import AgreeSignup from './AgreeSignup';
 import FormCustom from './FormCustom';
 
 import { ProfileIcon } from 'generated/icons/MyIcons';
@@ -92,6 +93,7 @@ const FormView = ({
           </Select>
         </FormCustom>
       </Box>
+      <AgreeSignup />
       <Button variant="orange" type="submit">
         회원가입 완료
       </Button>
