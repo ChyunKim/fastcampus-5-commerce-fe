@@ -10,6 +10,10 @@ export const Heading: ComponentSingleStyleConfig = {
       m: '10px 0',
       lineHeight: '38px',
     },
+    titlelarge: {
+      fontSize: '20px',
+      lineHeight: '29px',
+    },
     title: {
       fontSize: '16px',
       lineHeight: '28px',

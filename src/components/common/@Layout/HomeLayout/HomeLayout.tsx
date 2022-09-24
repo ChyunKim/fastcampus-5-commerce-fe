@@ -4,6 +4,7 @@ import { Container, ContainerProps } from '@chakra-ui/react';
 
 import { LAYOUT } from '@constants/layout';
 
+import HomeFooter from './_fragments/HomeFooter';
 import HomeHeader from './_fragments/HomeHeader';
 
 interface HomeLayoutProps {
@@ -16,17 +17,17 @@ interface HomeLayoutProps {
 const HomeLayout = ({
   //
   header = <HomeHeader />,
-  footer,
+  footer = <HomeFooter />,
   containerProps,
   content,
 }: HomeLayoutProps) => {
   return (
     <>
-      {header}
-      <Container pt={LAYOUT.HEADER.HEIGHT} {...containerProps}>
+      <Container w="375px" p="0" {...containerProps}>
+        {header}
         {content}
+        {footer}
       </Container>
-      {footer}
     </>
   );
 };

@@ -8,6 +8,8 @@ import { LAYOUT } from '@constants/layout';
 import { HOME_HEADER_VARIANTS, HomeHeaderVariantType } from './HomeHeader.data';
 import HomeHeaderDrawer from './_fragments/HomeHeaderDrawer';
 
+import { CartIcon, LogoIcon } from 'generated/icons/MyIcons';
+
 interface HomeHeaderProps {
   variant?: HomeHeaderVariantType;
 }
@@ -19,34 +21,36 @@ const HomeHeader = ({ variant = 'light' }: HomeHeaderProps) => {
 
   return (
     <>
-      <Flex //
+      <Flex
         as="header"
-        px={{ base: '16px', md: '80px' }}
+        w="inherit"
         alignItems="center"
-        justifyContent="space-between"
         position="fixed"
-        zIndex="sticky"
         transition="all 0.3s"
-        w="100%"
+        justifyContent="space-between"
         h={LAYOUT.HEADER.HEIGHT}
+        p="0 16px"
         {...cssByVariant.header}
       >
-        <Image //
-          src="/images/header/logo.png"
-          w="74px"
-          h="42px"
-          cursor="pointer"
-        />
-        <Image src="/images/header/menu.png" w="24px" h="24px" />
-        <IconButton //
-          color={cssByVariant.pointColor}
+        <IconButton
+          color="black"
           icon={<MenuIcon w="24px" h="24px" />}
           onClick={onOpen}
           cursor="pointer"
-          bg="transparent"
+          bg="none"
+          aria-label="btn-toggle-drawer"
+        />
+        <LogoIcon w="120px" color="primary.500" />
+        <IconButton
+          color="black"
+          icon={<CartIcon w="24px" h="24px" />}
+          onClick={onOpen}
+          cursor="pointer"
+          bg="none"
           aria-label="btn-toggle-drawer"
         />
       </Flex>
+
       <HomeHeaderDrawer
         isOpen={isOpen}
         onClose={onClose}
