@@ -65,6 +65,7 @@ const FormView = ({
 
         <FormCustom mt="40px" label="성별">
           <Select
+            {...register('gender')}
             variant="flushed"
             placeholder="성별을 선택하세요."
             borderBottom="2px solid"
