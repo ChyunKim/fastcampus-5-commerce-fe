@@ -55,6 +55,11 @@ export const CirclecheckIcon = (props: IconProps) => (
     />
   </Icon>
 );
+export const EllipseIcon = (props: IconProps) => (
+  <Icon viewBox="0 0 9 8" {...props}>
+    <circle cx={4.49414} cy={4} r={4} fill="#FF710B" />
+  </Icon>
+);
 export const HandsClappingIcon = (props: IconProps) => (
   <Icon viewBox="0 0 216 216" {...props}>
     <g clipPath="url(#clip0_5136_23661)">
@@ -177,6 +182,7 @@ export const LogoutIcon = (props: IconProps) => (
       <path
         d="M9.75 20.75H4.5C4.30109 20.75 4.11032 20.671 3.96967 20.5303C3.82902 20.3897 3.75 20.1989 3.75 20V5C3.75 4.80109 3.82902 4.61032 3.96967 4.46967C4.11032 4.32902 4.30109 4.25 4.5 4.25H9.75"
         stroke="#1A1A1A"
+        fill="none"
         strokeWidth={1.3}
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -201,15 +207,10 @@ export const MoonIcon = (props: IconProps) => (
 );
 export const PlusIcon = (props: IconProps) => (
   <Icon viewBox="0 0 20 20" {...props}>
-    <path
-      d="M10 1V19"
-      stroke="currentColor"
-      strokeWidth={2}
-      strokeLinecap="round"
-    />
+    <path d="M10 1V19" stroke="#FF710B" strokeWidth={2} strokeLinecap="round" />
     <path
       d="M19 10L1 10"
-      stroke="currentColor"
+      stroke="#FF710B"
       strokeWidth={2}
       strokeLinecap="round"
     />
