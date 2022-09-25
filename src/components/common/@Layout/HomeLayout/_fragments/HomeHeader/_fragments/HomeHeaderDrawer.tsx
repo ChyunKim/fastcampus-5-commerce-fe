@@ -1,5 +1,3 @@
-import Head from 'next/head';
-
 import {
   ChakraProps,
   DrawerFooter,
@@ -28,8 +26,8 @@ const HomeHeaderDrawer = ({
   ...basisProps
 }: HomeHeaderDrawerProps) => {
   return (
-    <Drawer placement="left" size="sm" {...basisProps}>
-      <DrawerOverlay />
+    <Drawer placement="left" size="xs" {...basisProps}>
+      <DrawerOverlay bg="#E5E5E5" />
       <DrawerContent>
         <DrawerHeader>
           <DrawerCloseButton
