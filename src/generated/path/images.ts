@@ -17,6 +17,7 @@ export const MY_IMAGES = {
       NAVER: { src: '\\icons\\social\\naver.png', alt: 'naver' },
     },
     SVG: {
+      CART: { src: '\\icons\\svg\\cart.svg', alt: 'cart' },
       CHECK: { src: '\\icons\\svg\\check.svg', alt: 'check' },
       CIRCLECHECK: { src: '\\icons\\svg\\circlecheck.svg', alt: 'circlecheck' },
       HANDS_CLAPPING: {
@@ -24,14 +25,18 @@ export const MY_IMAGES = {
         alt: 'hands-clapping',
       },
       LOGO: { src: '\\icons\\svg\\LOGO.svg', alt: 'logo' },
+      LOGOUT: { src: '\\icons\\svg\\logout.svg', alt: 'logout' },
       MOON: { src: '\\icons\\svg\\moon.svg', alt: 'moon' },
       PROFILE: { src: '\\icons\\svg\\profile.svg', alt: 'profile' },
       SUN: { src: '\\icons\\svg\\sun.svg', alt: 'sun' },
     },
   },
   IMAGES: {
-    MAIN: { src: '\\images\\main.png', alt: 'main' },
+    MAIN: { src: '\\images\\main.svg', alt: 'main' },
     NEW_OG: { src: '\\images\\new_og.png', alt: 'new-og' },
+    PACK1: { src: '\\images\\pack1.svg', alt: 'pack1' },
+    PACK2: { src: '\\images\\pack2.svg', alt: 'pack2' },
+    PACK3: { src: '\\images\\pack3.svg', alt: 'pack3' },
   },
   VERCEL: { src: '\\vercel.svg', alt: 'vercel' },
 };
