@@ -23,7 +23,7 @@ export const HOME_HEADER_VARIANTS: Record<
     subColor: 'secondary.500',
   },
   transparent: {
-    header: { bg: 'transparent' },
+    header: { bg: 'none' },
     drawer: { bg: 'white' },
     pointColor: 'black',
     subColor: 'gray.400',

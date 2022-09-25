@@ -1,4 +1,4 @@
-import { Flex, IconButton, Image } from '@chakra-ui/react';
+import { Flex, IconButton } from '@chakra-ui/react';
 import { useDisclosure } from '@chakra-ui/react';
 
 import MenuIcon from '@components/common/@Icons/System/Menu';
@@ -39,18 +39,22 @@ const HomeHeader = ({ variant = 'light' }: HomeHeaderProps) => {
           cursor="pointer"
           bg="none"
           aria-label="btn-toggle-drawer"
+          _hover={{
+            bg: 'none',
+          }}
         />
         <LogoIcon w="120px" color="primary.500" />
         <IconButton
           color="black"
           icon={<CartIcon w="24px" h="24px" />}
-          onClick={onOpen}
           cursor="pointer"
           bg="none"
-          aria-label="btn-toggle-drawer"
+          aria-label="shoppoing-cart"
+          _hover={{
+            bg: 'none',
+          }}
         />
       </Flex>
-
       <HomeHeaderDrawer
         isOpen={isOpen}
         onClose={onClose}
