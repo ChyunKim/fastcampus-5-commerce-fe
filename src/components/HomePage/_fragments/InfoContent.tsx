@@ -34,7 +34,13 @@ const InfoContent = () => {
           INCOURSE.RUN
         </Button>
       </Center>
-      <UpwardArrowIcon w="50px" h="50px" float="right" />
+      <UpwardArrowIcon
+        w="50px"
+        h="50px"
+        float="right"
+        cursor="pointer"
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+      />
     </Box>
   );
 };
