@@ -5,8 +5,9 @@ import { BoxProps, Container } from '@chakra-ui/react';
 import HomeMain from '@components/common/@Layout/HomeLayout/_fragments/HomeMain';
 
 import FirstContent from './_fragments/FirstContent';
+import ForthContent from './_fragments/ForthContent';
 import SecondContent from './_fragments/SecondContent';
-import ThirdContent from './_fragments/ThirdContent';
+import ThirdContent from './_fragments/ThirdCotent';
 
 interface HomePageContentProps extends BoxProps {}
 
@@ -16,6 +17,7 @@ function HomePageContent({ ...basisProps }: HomePageContentProps) {
       <FirstContent />
       <SecondContent />
       <ThirdContent />
+      <ForthContent />
       <HomeMain />
     </Container>
   );
