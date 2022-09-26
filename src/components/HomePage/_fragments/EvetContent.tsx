@@ -12,7 +12,7 @@ import {
 
 import { ListarrowIcon } from 'generated/icons/CustomIcon';
 
-const ForthContent = () => {
+const EvetContent = () => {
   return (
     <>
       <Box w="375px" h="450px" bgImage="/images/bgevent.svg" p="100px 16px">
@@ -78,4 +78,4 @@ const ForthContent = () => {
     </>
   );
 };
-export default ForthContent;
+export default EvetContent;

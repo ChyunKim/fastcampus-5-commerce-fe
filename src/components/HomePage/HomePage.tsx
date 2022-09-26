@@ -2,10 +2,10 @@ import React from 'react';
 
 import { BoxProps, Container } from '@chakra-ui/react';
 
-import HomeMain from '@components/common/@Layout/HomeLayout/_fragments/HomeMain';
-
+import EvetContent from './_fragments/EvetContent';
 import FirstContent from './_fragments/FirstContent';
-import ForthContent from './_fragments/ForthContent';
+import InfoContent from './_fragments/InfoContent';
+import ReviewContent from './_fragments/ReviewContetn';
 import SecondContent from './_fragments/SecondContent';
 import ThirdContent from './_fragments/ThirdCotent';
 
@@ -17,8 +17,9 @@ function HomePageContent({ ...basisProps }: HomePageContentProps) {
       <FirstContent />
       <SecondContent />
       <ThirdContent />
-      <ForthContent />
-      <HomeMain />
+      <EvetContent />
+      <ReviewContent />
+      <InfoContent />
     </Container>
   );
 }
