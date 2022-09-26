@@ -36,14 +36,16 @@ const SecondContent = () => {
           </Heading>
         </Flex>
         <Box fontSize="20px" mt="30px" ml="75px">
-          <Text>부풀려지는 가격은 이제 그만!</Text>
-          <Flex>
-            <Text color="primary.500" fontWeight="700">
+          <Text>
+            부풀려지는 가격은 이제 그만!
+            <br />
+            <Text as="span" color="primary.500" fontWeight="700">
               인코스런
             </Text>
-            <Text>은 가격거품을 제거한</Text>
-          </Flex>
-          <Text>착한소비를 위해 태어났습니다.</Text>
+            은 가격거품을 제거한
+            <br />
+            착한소비를 위해 태어났습니다.
+          </Text>
         </Box>
       </Box>
       <Box
