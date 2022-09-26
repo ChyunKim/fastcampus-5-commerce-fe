@@ -1,10 +1,10 @@
 import { IconProps, Icon } from '@chakra-ui/react';
 export const CallIcon = (props: IconProps) => (
   <Icon viewBox="0 0 70 70" {...props}>
-    <g filter="url(#filter0_d_5136_23306)">
+    <g filter="url(#filter0_d_8527_428)">
       <path
         d="M35 60C48.8071 60 60 48.8071 60 35C60 21.1929 48.8071 10 35 10C21.1929 10 10 21.1929 10 35C10 48.8071 21.1929 60 35 60Z"
-        fill="url(#paint0_linear_5136_23306)"
+        fill="url(#paint0_linear_8527_428)"
       />
       <path
         d="M35 59.5C48.531 59.5 59.5 48.531 59.5 35C59.5 21.469 48.531 10.5 35 10.5C21.469 10.5 10.5 21.469 10.5 35C10.5 48.531 21.469 59.5 35 59.5Z"
@@ -29,7 +29,7 @@ export const CallIcon = (props: IconProps) => (
     />
     <defs>
       <filter
-        id="filter0_d_5136_23306"
+        id="filter0_d_8527_428"
         x={0}
         y={0}
         width={70}
@@ -53,17 +53,17 @@ export const CallIcon = (props: IconProps) => (
         <feBlend
           mode="normal"
           in2="BackgroundImageFix"
-          result="effect1_dropShadow_5136_23306"
+          result="effect1_dropShadow_8527_428"
         />
         <feBlend
           mode="normal"
           in="SourceGraphic"
-          in2="effect1_dropShadow_5136_23306"
+          in2="effect1_dropShadow_8527_428"
           result="shape"
         />
       </filter>
       <linearGradient
-        id="paint0_linear_5136_23306"
+        id="paint0_linear_8527_428"
         x1={10}
         y1={35}
         x2={60}
@@ -650,5 +650,22 @@ export const SunIcon = (props: IconProps) => (
     <line x1={21} y1={12} x2={23} y2={12} />
     <line x1={4.22} y1={19.78} x2={5.64} y2={18.36} />
     <line x1={18.36} y1={5.64} x2={19.78} y2={4.22} />
+  </Icon>
+);
+export const UpwardArrowIcon = (props: IconProps) => (
+  <Icon viewBox="0 0 50 50" {...props}>
+    <path
+      d="M49.5 25C49.5 38.531 38.531 49.5 25 49.5C11.469 49.5 0.5 38.531 0.5 25C0.5 11.469 11.469 0.5 25 0.5C38.531 0.5 49.5 11.469 49.5 25Z"
+      stroke="#1A1A1A"
+    />
+    <path
+      d="M25 49.5C38.531 49.5 49.5 38.531 49.5 25C49.5 11.469 38.531 0.5 25 0.5C11.469 0.5 0.5 11.469 0.5 25C0.5 38.531 11.469 49.5 25 49.5Z"
+      stroke="#1A1A1A"
+    />
+    <path
+      d="M25.539 20.949V32.5H24.461V20.948V19.7407L23.6074 20.5945L18.455 25.7479L17.7071 25L25 17.7071L32.2929 25L31.545 25.7479L26.3926 20.5954L25.539 19.7419V20.949Z"
+      fill="#1A1A1A"
+      stroke="#1A1A1A"
+    />
   </Icon>
 );
