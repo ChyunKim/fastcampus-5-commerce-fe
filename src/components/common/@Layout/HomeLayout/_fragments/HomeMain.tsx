@@ -5,7 +5,6 @@ import {
   Button,
   Container,
   Flex,
-  HStack,
   Heading,
   Image,
   Text,
@@ -21,31 +20,10 @@ import {
   PlusIcon,
   ProcessIcon,
 } from 'generated/icons/CustomIcon';
-import MyDocument from 'pages/_document';
 
 const HomeMain = () => {
   return (
     <Container p="0">
-      <Box
-        w="100%"
-        h="782px"
-        border="none"
-        bgImage="url('/images/main.svg')"
-        p="160px 16px"
-        m=""
-      >
-        <Heading variant="extraTitle" m="0">
-          지속가능한
-          <br />
-          클린{'&'}비건뷰티, 인코스런
-        </Heading>
-        <Text fontSize="20px" mt="20px">
-          자연과 사람에게
-          <br /> 책임질 수 있는 지속 가능한
-          <br /> 제품을 만듭니다.
-        </Text>
-      </Box>
-
       <Box w="100%" h="782px" bg="#FFFCEF" border="none">
         <Image
           src={MY_IMAGES.IMAGES.PACK1.src}
@@ -273,6 +251,36 @@ const HomeMain = () => {
               </Text>
             </VStack>
           </Box>
+        </Box>
+        <Box p="80px 16px 100px" textAlign="center">
+          <Heading variant="extraTitle">
+            인코스런을 <strong>직접 사용해본</strong>
+            <br />
+            고객님의 솔직한 리뷰
+          </Heading>
+          <Flex>
+            <Button variant="orange" w="53px" h="30px" fontSize="12px">
+              전체
+            </Button>
+            <Button
+              borderRadius="15px"
+              w="83px"
+              h="30px"
+              fontSize="12px"
+              bg="gray.200"
+            >
+              바스&샴푸
+            </Button>
+            <Button variant="orange" w="53px" h="30px" fontSize="12px">
+              오일
+            </Button>
+            <Button variant="orange" w="53px" h="30px" fontSize="12px">
+              로션
+            </Button>
+            <Button variant="orange" w="53px" h="30px" fontSize="12px">
+              크림
+            </Button>
+          </Flex>
         </Box>
       </Box>
     </Container>
