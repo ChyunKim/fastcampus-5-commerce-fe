@@ -27,7 +27,7 @@ const HomeHeaderDrawer = ({
 }: HomeHeaderDrawerProps) => {
   return (
     <Drawer placement="left" size="xs" {...basisProps}>
-      <DrawerOverlay bg="#E5E5E5" />
+      <DrawerOverlay bg="dim.secondary" />
       <DrawerContent>
         <DrawerHeader>
           <DrawerCloseButton
