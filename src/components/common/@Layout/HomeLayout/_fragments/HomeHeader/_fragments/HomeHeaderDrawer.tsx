@@ -70,7 +70,7 @@ const HomeHeaderDrawer = ({
             </Heading>
           </Box>
         </DrawerBody>
-        <DrawerFooter>
+        <DrawerFooter justifyContent="flex-start">
           <HStack>
             <LogoutIcon boxSize={6} />
             <Heading variant="titlelarge">로그아웃</Heading>
