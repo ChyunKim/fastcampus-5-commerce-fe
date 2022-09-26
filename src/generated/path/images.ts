@@ -26,6 +26,7 @@ export const MY_IMAGES = {
         alt: 'hands-clapping',
       },
       LINECIRCLE: { src: '\\icons\\svg\\linecircle.svg', alt: 'linecircle' },
+      LISTARROW: { src: '\\icons\\svg\\listarrow.svg', alt: 'listarrow' },
       LOGO: { src: '\\icons\\svg\\LOGO.svg', alt: 'logo' },
       LOGOUT: { src: '\\icons\\svg\\logout.svg', alt: 'logout' },
       MOON: { src: '\\icons\\svg\\moon.svg', alt: 'moon' },
@@ -38,11 +39,13 @@ export const MY_IMAGES = {
   IMAGES: {
     BGCIRCLE: { src: '\\images\\bgcircle.svg', alt: 'bgcircle' },
     BGEVENT: { src: '\\images\\bgevent.svg', alt: 'bgevent' },
+    BGRETANGLE: { src: '\\images\\bgretangle.png', alt: 'bgretangle' },
     MAIN: { src: '\\images\\main.svg', alt: 'main' },
     NEW_OG: { src: '\\images\\new_og.png', alt: 'new-og' },
     PACK1: { src: '\\images\\pack1.svg', alt: 'pack1' },
     PACK2: { src: '\\images\\pack2.svg', alt: 'pack2' },
     PACK3: { src: '\\images\\pack3.svg', alt: 'pack3' },
+    PRODUCTIMG: { src: '\\images\\productimg.svg', alt: 'productimg' },
   },
   VERCEL: { src: '\\vercel.svg', alt: 'vercel' },
 };
