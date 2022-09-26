@@ -16,7 +16,12 @@ const ThirdContent = () => {
         </Heading>
         <Box textAlign="center" p="10px 0" fontSize="20px">
           <Text>
-            불합리한 <strong> 중간 유통 거품을 제거</strong>한
+            불합리한{' '}
+            <Text as="span" fontWeight="700">
+              {' '}
+              중간 유통 거품을 제거
+            </Text>
+            한
             <br />
             인코스런만의 투명한 유통혁신
           </Text>
@@ -75,14 +80,35 @@ const ThirdContent = () => {
       </Box>
       <Box mt="80px" mb="70px" textAlign="center">
         <Heading variant="extraTitle" fontWeight="400" mb="20px">
-          이렇게 <strong>비교하세요!</strong>
+          이렇게{' '}
+          <Text as="span" fontWeight="700">
+            비교하세요!
+          </Text>
         </Heading>
         <Text fontSize="20px">
           인코스런은 부담스러운
           <br />
-          영유아 화장품의 <strong>가격거품을 제거해</strong>
+          영유아 화장품의{' '}
+          <Text
+            as="u"
+            fontWeight="700"
+            textUnderlineOffset="-5px"
+            textDecorationColor="primary.500"
+            textDecorationThickness="10px"
+          >
+            가격거품을 제거해
+          </Text>
           <br />
-          <strong>투명한 가격</strong>을 만들어 갑니다.
+          <Text
+            as="u"
+            fontWeight="700"
+            textUnderlineOffset="-5px"
+            textDecorationColor="primary.500"
+            textDecorationThickness="10px"
+          >
+            투명한 가격
+          </Text>
+          을 만들어 갑니다.
           <br />
         </Text>
         <Flex justifyContent="center" mt="70px" alignItems="end">
