@@ -6,6 +6,7 @@ import HomeMain from '@components/common/@Layout/HomeLayout/_fragments/HomeMain'
 
 import FirstContent from './_fragments/FirstContent';
 import SecondContent from './_fragments/SecondContent';
+import ThirdContent from './_fragments/ThirdContent';
 
 interface HomePageContentProps extends BoxProps {}
 
@@ -14,6 +15,7 @@ function HomePageContent({ ...basisProps }: HomePageContentProps) {
     <Container p="0" {...basisProps}>
       <FirstContent />
       <SecondContent />
+      <ThirdContent />
       <HomeMain />
     </Container>
   );
