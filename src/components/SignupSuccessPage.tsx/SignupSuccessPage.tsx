@@ -1,6 +1,6 @@
 import { Button, Container, Heading, Text, VStack } from '@chakra-ui/react';
 
-import { HandsClappingIcon } from 'generated/icons/MyIcons';
+import { HandsClappingIcon } from 'generated/icons/CustomIcon';
 
 const SignupSuccessPage = () => {
   return (

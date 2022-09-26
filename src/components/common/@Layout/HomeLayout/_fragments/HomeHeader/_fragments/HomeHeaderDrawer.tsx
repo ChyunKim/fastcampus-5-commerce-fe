@@ -15,7 +15,7 @@ import {
   Heading,
 } from '@chakra-ui/react';
 
-import { LogoutIcon } from 'generated/icons/MyIcons';
+import { LogoutIcon } from 'generated/icons/CustomIcon';
 
 interface HomeHeaderDrawerProps extends Omit<DrawerProps, 'children'> {
   bodyProps?: ChakraProps;

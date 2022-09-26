@@ -8,7 +8,7 @@ import { LAYOUT } from '@constants/layout';
 import { HOME_HEADER_VARIANTS, HomeHeaderVariantType } from './HomeHeader.data';
 import HomeHeaderDrawer from './_fragments/HomeHeaderDrawer';
 
-import { CartIcon, LogoIcon } from 'generated/icons/MyIcons';
+import { CartIcon, LogoIcon } from 'generated/icons/CustomIcon';
 
 interface HomeHeaderProps {
   variant?: HomeHeaderVariantType;

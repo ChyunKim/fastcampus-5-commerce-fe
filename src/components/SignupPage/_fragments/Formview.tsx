@@ -13,7 +13,7 @@ import { FormProps } from '../_hooks/useSignForm';
 import AgreeSignup from './AgreeSignup';
 import FormCustom from './FormCustom';
 
-import { ProfileIcon } from 'generated/icons/MyIcons';
+import { ProfileIcon } from 'generated/icons/CustomIcon';
 
 interface FormData extends BoxProps {
   formData: UseFormReturn<FormProps>;

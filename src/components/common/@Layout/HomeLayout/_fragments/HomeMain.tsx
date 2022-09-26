@@ -11,7 +11,7 @@ import {
   Text,
 } from '@chakra-ui/react';
 
-import { EllipseIcon, PlusIcon } from 'generated/icons/MyIcons';
+import { EllipseIcon, PlusIcon } from 'generated/icons/CustomIcon';
 
 const HomeMain = () => {
   return (
@@ -87,7 +87,7 @@ const HomeMain = () => {
           <EllipseIcon boxSize={2} m="0 9px" />
           <EllipseIcon boxSize={2} m="0 9px" />
         </Flex>
-        <Heading variant="ext raTitle" m="0" textAlign="center" pl="40px">
+        <Heading variant="extraTitle" m="0" textAlign="center" pl="40px">
           이제 합리적으로
           <br />
           지갑을 지키세요!

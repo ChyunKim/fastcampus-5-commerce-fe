@@ -6,7 +6,7 @@ import SocialButton, { SocialType } from '@components/common/SocialButton';
 
 import { SOCIAL } from '@constants/social';
 
-import { LogoIcon } from 'generated/icons/MyIcons';
+import { LogoIcon } from 'generated/icons/CustomIcon';
 
 const SOCIAL_REDIRECT_URL = `${CONFIG.DOMAIN}`;
 

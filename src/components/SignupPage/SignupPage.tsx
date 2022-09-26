@@ -2,7 +2,7 @@ import { Box, Container, Heading } from '@chakra-ui/react';
 
 import FormPage from './_fragments/FormPage';
 
-import { LogoIcon } from 'generated/icons/MyIcons';
+import { LogoIcon } from 'generated/icons/CustomIcon';
 
 const SignupPage = () => {
   return (

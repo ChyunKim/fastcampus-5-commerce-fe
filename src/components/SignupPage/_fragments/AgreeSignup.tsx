@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import { Box, HStack, Heading, Text } from '@chakra-ui/react';
 
-import { CheckIcon, CirclecheckIcon } from 'generated/icons/MyIcons';
+import { CheckIcon, CirclecheckIcon } from 'generated/icons/CustomIcon';
 
 const AgreeSignup = () => {
   const [iconColor, setIconColor] = useState('gray.400');
