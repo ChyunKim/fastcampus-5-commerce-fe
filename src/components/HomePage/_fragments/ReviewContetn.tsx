@@ -4,7 +4,7 @@ import { CallIcon, RadiostarIcon } from 'generated/icons/CustomIcon';
 
 const ReviewContent = () => {
   return (
-    <Box p="80px 16px 100px" textAlign="center">
+    <Box p="80px 16px 120px" textAlign="center">
       <Heading variant="extraTitle">
         인코스런을 <strong>직접 사용해본</strong>
         <br />
@@ -30,6 +30,7 @@ const ReviewContent = () => {
           w="53px"
           h="30px"
           fontSize="12px"
+          bg="gray.200"
           m="0 5px"
           fontWeight="400"
         >
@@ -40,6 +41,7 @@ const ReviewContent = () => {
           w="53px"
           h="30px"
           fontSize="12px"
+          bg="gray.200"
           m="0 5px"
           fontWeight="400"
         >
@@ -50,6 +52,7 @@ const ReviewContent = () => {
           w="53px"
           h="30px"
           fontSize="12px"
+          bg="gray.200"
           m="0 5px"
           fontWeight="400"
         >
@@ -104,7 +107,7 @@ const ReviewContent = () => {
           <Box borderRadius="5px" w="80px" h="80px" />
         </Flex>
       </Box>
-      <CallIcon w="50px" h="50px" float="right" mt="30px" />
+      <CallIcon w="70px" h="70px" float="right" mt="30px" mr="-10px" />
     </Box>
   );
 };
