@@ -1,5 +1,17 @@
 import { Icon, IconProps } from '@chakra-ui/react';
 
+export const ListarrowIcon = (props: IconProps) => (
+  <Icon viewBox="0 0 24 24" {...props}>
+    <path
+      d="M9.64099 16.7036L14.382 12.0137L9.64099 7.67285"
+      stroke="#1A1A1A"
+      fill="none"
+      strokeWidth={1.5}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </Icon>
+);
 export const LinecircleIcon = (props: IconProps) => (
   <Icon viewBox="0 0 377 37" {...props}>
     <path

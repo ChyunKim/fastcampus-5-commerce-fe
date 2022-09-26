@@ -132,11 +132,22 @@ export const HandsClappingIcon = (props: IconProps) => (
   </Icon>
 );
 export const LinecircleIcon = (props: IconProps) => (
-  <Icon viewBox="0 0 377 37" {...props}>
+  <Icon viewBox="0 0 375 39" {...props}>
     <path
       d="M376 4.17195C322.562 25.5821 163.296 69.7897 -1.00001 1"
       stroke="#FF710B"
       strokeWidth={2}
+    />
+  </Icon>
+);
+export const ListarrowIcon = (props: IconProps) => (
+  <Icon viewBox="0 0 24 24" {...props}>
+    <path
+      d="M9.64099 16.7036L14.382 12.0137L9.64099 7.67285"
+      stroke="#1A1A1A"
+      strokeWidth={1.5}
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </Icon>
 );

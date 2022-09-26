@@ -1,5 +1,3 @@
-import Head from 'next/head';
-
 import { MY_IMAGES } from '@image';
 
 import {
@@ -17,10 +15,10 @@ import {
   CheckIcon,
   EllipseIcon,
   LinecircleIcon,
+  ListarrowIcon,
   LogoIcon,
   PlusIcon,
   ProcessIcon,
-  ProfileIcon,
 } from 'generated/icons/CustomIcon';
 
 const HomeMain = () => {
@@ -212,6 +210,26 @@ const HomeMain = () => {
                 인코스런
               </Text>
             </VStack>
+          </Flex>
+        </Box>
+        <Box w="375px" h="450px" bgImage="/images/bgevent.svg" p="100px 16px">
+          <Flex>
+            <Heading variant="extraTitle" color="primary.500" m="0">
+              인코스런
+            </Heading>
+            <Heading variant="extraTitle" fontWeight="400" m="0">
+              가입하고
+            </Heading>
+          </Flex>
+          <Heading variant="extraTitle" m="0">
+            전상품 1000원 혜택
+          </Heading>
+          <Heading variant="extraTitle" fontWeight="400" m="0">
+            받아보세요.
+          </Heading>
+          <Flex mt="20px" alignItems="center">
+            <Text fontSize="16px"> 이벤트상세보기</Text>
+            <ListarrowIcon boxSize={6} />
           </Flex>
         </Box>
       </Box>
