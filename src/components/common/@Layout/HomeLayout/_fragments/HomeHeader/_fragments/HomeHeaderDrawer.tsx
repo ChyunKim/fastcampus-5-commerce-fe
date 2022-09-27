@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import {
   ChakraProps,
   DrawerFooter,
@@ -14,6 +16,8 @@ import {
   DrawerOverlay,
   Heading,
 } from '@chakra-ui/react';
+
+import { ROUTES } from '@constants/routes';
 
 import { LogoutIcon } from 'generated/icons/CustomIcon';
 
@@ -55,9 +59,11 @@ const HomeHeaderDrawer = ({
             </Heading>
           </Box>
           <Box borderBottom="1px solid" borderColor="gray.200" p="16px 0">
-            <Heading variant="title" p="0 16px">
-              홈
-            </Heading>
+            <Link href={ROUTES.HOME}>
+              <Heading variant="title" p="0 16px" cursor="pointer">
+                홈
+              </Heading>
+            </Link>
           </Box>
           <Box borderBottom="1px solid" borderColor="gray.200" p="16px 0">
             <Heading variant="title" p="0 16px">
