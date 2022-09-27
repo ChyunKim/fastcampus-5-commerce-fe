@@ -102,6 +102,7 @@ export const Button: ComponentSingleStyleConfig = {
       color: 'white',
       borderRadius: '25px',
       fontSize: '16px',
+      cursor: 'pointer',
     },
   },
   sizes: {

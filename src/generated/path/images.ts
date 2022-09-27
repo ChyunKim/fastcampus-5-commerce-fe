@@ -17,6 +17,7 @@ export const MY_IMAGES = {
       NAVER: { src: '\\icons\\social\\naver.png', alt: 'naver' },
     },
     SVG: {
+      CALL: { src: '\\icons\\svg\\call.svg', alt: 'call' },
       CART: { src: '\\icons\\svg\\cart.svg', alt: 'cart' },
       CHECK: { src: '\\icons\\svg\\check.svg', alt: 'check' },
       CIRCLECHECK: { src: '\\icons\\svg\\circlecheck.svg', alt: 'circlecheck' },
@@ -25,6 +26,7 @@ export const MY_IMAGES = {
         src: '\\icons\\svg\\handsClapping.svg',
         alt: 'hands-clapping',
       },
+      INSTAGRAM: { src: '\\icons\\svg\\instagram.svg', alt: 'instagram' },
       LINECIRCLE: { src: '\\icons\\svg\\linecircle.svg', alt: 'linecircle' },
       LISTARROW: { src: '\\icons\\svg\\listarrow.svg', alt: 'listarrow' },
       LOGO: { src: '\\icons\\svg\\LOGO.svg', alt: 'logo' },
@@ -33,7 +35,12 @@ export const MY_IMAGES = {
       PLUS: { src: '\\icons\\svg\\plus.svg', alt: 'plus' },
       PROCESS: { src: '\\icons\\svg\\process.svg', alt: 'process' },
       PROFILE: { src: '\\icons\\svg\\profile.svg', alt: 'profile' },
+      RADIOSTAR: { src: '\\icons\\svg\\radiostar.svg', alt: 'radiostar' },
       SUN: { src: '\\icons\\svg\\sun.svg', alt: 'sun' },
+      UPWARD_ARROW: {
+        src: '\\icons\\svg\\upwardArrow.svg',
+        alt: 'upward-arrow',
+      },
     },
   },
   IMAGES: {
@@ -46,6 +53,7 @@ export const MY_IMAGES = {
     PACK2: { src: '\\images\\pack2.svg', alt: 'pack2' },
     PACK3: { src: '\\images\\pack3.svg', alt: 'pack3' },
     PRODUCTIMG: { src: '\\images\\productimg.svg', alt: 'productimg' },
+    RECTANGLE_221: { src: '\\images\\Rectangle 221.png', alt: 'rectangle-221' },
   },
   VERCEL: { src: '\\vercel.svg', alt: 'vercel' },
 };
