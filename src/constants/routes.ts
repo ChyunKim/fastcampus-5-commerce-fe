@@ -30,6 +30,6 @@ export const ROUTES = {
     signupsuccess: 'login/signupsuccess',
   },
   PRODUCT: {
-    MAIN: '/product-list',
+    MAIN: '/product',
   },
 } as const;

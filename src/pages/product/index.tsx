@@ -4,7 +4,7 @@ import React from 'react';
 import ProductListPage from '@components/ProductListPage';
 import HomeLayout from '@components/common/@Layout/HomeLayout';
 
-const ProduceList = () => {
+const ProductList = () => {
   return (
     <>
       <Head>
@@ -15,4 +15,4 @@ const ProduceList = () => {
   );
 };
 
-export default ProduceList;
+export default ProductList;

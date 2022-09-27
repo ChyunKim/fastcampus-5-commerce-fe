@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { MY_IMAGES } from '@image';
 
 import {
@@ -27,6 +29,9 @@ const ProductCard = () => {
         <Image
           src={MY_IMAGES.IMAGES.RECTANGLE_221.src}
           alt={MY_IMAGES.IMAGES.RECTANGLE_221.alt}
+          onClick={() => {
+            console.log('상세페이지 이동');
+          }}
         />
       </Box>
       <Box w="343px" p="20px 30px">
