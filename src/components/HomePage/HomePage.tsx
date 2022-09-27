@@ -5,7 +5,7 @@ import { BoxProps, Container } from '@chakra-ui/react';
 import EvetContent from './_fragments/EvetContent';
 import FirstContent from './_fragments/FirstContent';
 import InfoContent from './_fragments/InfoContent';
-import ReviewContent from './_fragments/ReviewContetn';
+import ReviewContent from './_fragments/ReviewContent';
 import SecondContent from './_fragments/SecondContent';
 import ThirdContent from './_fragments/ThirdCotent';
 

@@ -63,7 +63,7 @@ const ReviewContent = () => {
         w="325px"
         h="464px"
         borderRadius="10px"
-        boxShadow="0 0px 10px 0 #1A1A1A10"
+        boxShadow="0 0px 10px 0 #1A1A1A20"
         p="20px"
         textAlign="left"
       >
