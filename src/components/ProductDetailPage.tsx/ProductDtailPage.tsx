@@ -4,9 +4,9 @@ import { ProductimgIcon } from 'generated/icons/MyIcons';
 
 const ProductDetailPage = () => {
   return (
-    <Container mt="110px" mb="80px">
+    <Container mt="110px" mb="80px" p="0">
       <Box>
-        <ProductimgIcon />
+        <ProductimgIcon w="343px" h="350px" />
       </Box>
     </Container>
   );

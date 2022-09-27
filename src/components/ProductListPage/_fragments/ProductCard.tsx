@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import React from 'react';
 
 import { MY_IMAGES } from '@image';
@@ -13,9 +14,12 @@ import {
   Text,
 } from '@chakra-ui/react';
 
+import { ROUTES } from '@constants/routes';
+
 import { RadiostarIcon } from 'generated/icons/CustomIcon';
 
 const ProductCard = () => {
+  const router = useRouter();
   return (
     <Container
       w="343px"
@@ -30,7 +34,7 @@ const ProductCard = () => {
           src={MY_IMAGES.IMAGES.RECTANGLE_221.src}
           alt={MY_IMAGES.IMAGES.RECTANGLE_221.alt}
           onClick={() => {
-            console.log('상세페이지 이동');
+            router.push(ROUTES.PRODUCT.DETAIL);
           }}
         />
       </Box>

@@ -31,5 +31,6 @@ export const ROUTES = {
   },
   PRODUCT: {
     MAIN: '/product',
+    DETAIL: 'product/detail',
   },
 } as const;
