@@ -24,9 +24,12 @@ export const ROUTES = {
       S3_FILE_INPUT: '/starter-docs/examples/file-input',
     },
   },
-  login: {
+  LOGIN: {
     MAIN: '/login',
     signup: '/login/signup',
     signupsuccess: 'login/signupsuccess',
+  },
+  PRODUCT: {
+    MAIN: '/product-list',
   },
 } as const;
