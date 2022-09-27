@@ -66,9 +66,11 @@ const HomeHeaderDrawer = ({
             </Link>
           </Box>
           <Box borderBottom="1px solid" borderColor="gray.200" p="16px 0">
-            <Heading variant="title" p="0 16px">
-              상품보기
-            </Heading>
+            <Link href={ROUTES.PRODUCT.MAIN}>
+              <Heading variant="title" p="0 16px" cursor="pointer">
+                상품보기
+              </Heading>
+            </Link>
           </Box>
           <Box borderBottom="1px solid" borderColor="gray.200" p="16px 0">
             <Heading variant="title" p="0 16px">
