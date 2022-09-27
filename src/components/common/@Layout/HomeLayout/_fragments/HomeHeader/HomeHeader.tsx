@@ -32,9 +32,10 @@ const HomeHeader = ({ variant = 'light' }: HomeHeaderProps) => {
         p="0 16px"
         {...cssByVariant.header}
       >
-        <IconButton
+        <MenuIcon
+          w="24px"
+          h="24px"
           color="black"
-          icon={<MenuIcon w="24px" h="24px" />}
           onClick={onOpen}
           cursor="pointer"
           bg="none"
@@ -44,9 +45,10 @@ const HomeHeader = ({ variant = 'light' }: HomeHeaderProps) => {
           }}
         />
         <LogoIcon w="120px" color="primary.500" />
-        <IconButton
+        <CartIcon
+          w="24px"
+          h="24px"
           color="black"
-          icon={<CartIcon w="24px" h="24px" />}
           cursor="pointer"
           bg="none"
           aria-label="shoppoing-cart"
