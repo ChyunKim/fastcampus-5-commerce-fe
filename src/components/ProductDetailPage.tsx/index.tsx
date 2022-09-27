@@ -1,3 +1,3 @@
-import ProductDetailPage from './ProductDtailPage';
+import ProductDetailPage from './ProductDetailPage';
 
 export default ProductDetailPage;

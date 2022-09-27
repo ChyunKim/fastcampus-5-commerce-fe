@@ -1,5 +1,30 @@
 import { Icon, IconProps } from '@chakra-ui/react';
 
+export const ToggleDownIcon = (props: IconProps) => (
+  <Icon viewBox="0 0 24 24" {...props}>
+    <path
+      d="M18.4209 9.32812L11.9119 14.9192L5.17188 9.32812"
+      stroke="#1A1A1A"
+      fill="none"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </Icon>
+);
+export const ToggleUpIcon = (props: IconProps) => (
+  <Icon viewBox="0 0 24 24" {...props}>
+    <path
+      d="M18.4209 14.6719L11.9119 9.08081L5.17188 14.6719"
+      stroke="#1A1A1A"
+      fill="none"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </Icon>
+);
+
 export const UpwardArrowIcon = (props: IconProps) => (
   <Icon viewBox="0 0 50 50" {...props}>
     <path
