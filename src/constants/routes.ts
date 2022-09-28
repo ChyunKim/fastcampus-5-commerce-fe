@@ -33,4 +33,7 @@ export const ROUTES = {
     MAIN: '/product',
     DETAIL: 'product/detail',
   },
+  SHOPPINGCART: {
+    MAIN: '/shoppingcart',
+  },
 } as const;
