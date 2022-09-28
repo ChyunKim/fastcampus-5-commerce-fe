@@ -1,5 +1,7 @@
+import EmptyCart from './_fragments/EmptyCart';
+
 const ShoppingCartPage = () => {
-  return <></>;
+  return <EmptyCart />;
 };
 
 export default ShoppingCartPage;
