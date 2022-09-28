@@ -8,11 +8,20 @@ import {
   Center,
   Container,
   Flex,
+  HStack,
+  Heading,
   Image,
   Text,
 } from '@chakra-ui/react';
 
-import { ToggleDownIcon, ToggleUpIcon } from 'generated/icons/CustomIcon';
+import ReviewContent from './_fragments/ReviewContent';
+
+import {
+  RadiostarIcon,
+  SubtractIcon,
+  ToggleDownIcon,
+  ToggleUpIcon,
+} from 'generated/icons/CustomIcon';
 import { ProductimgIcon } from 'generated/icons/MyIcons';
 
 const ProductDetailPage = () => {
@@ -90,6 +99,70 @@ const ProductDetailPage = () => {
               <ToggleUpIcon boxSize={6} m="0 5px" />
             )}
           </Button>
+        </Box>
+      </Container>
+      <Container>
+        <Flex p="16px 0" justifyContent="space-between" alignItems="center">
+          <Heading variant="title">주문 및 배송 안내</Heading>
+          <ToggleDownIcon boxSize={6} />
+        </Flex>
+        <Box borderTop="1px solid" borderColor="gray.200"></Box>
+      </Container>
+      <Container p="50px 16px">
+        <Flex justifyContent="space-between" alignItems="center">
+          <Heading variant="title">
+            리뷰{' '}
+            <Heading as="span" variant="title" color="primary.500">
+              78
+            </Heading>
+            건
+          </Heading>
+          <HStack>
+            <HStack bg="gray.200" p="6px 10px" minW="86px">
+              <Heading variant="titlesmall">최신순</Heading>
+              <ToggleDownIcon w="17px" h="28px" />
+            </HStack>
+            <HStack bg="gray.200" p="6px 10px">
+              <Heading variant="titlesmall">전체보기</Heading>
+              <ToggleDownIcon w="17px" h="28px" />
+            </HStack>
+          </HStack>
+        </Flex>
+        <Box p="20px 5px">
+          <Flex alignItems="center" justifyContent="space-between">
+            <Flex w="140px" justifyContent="space-between">
+              <Heading
+                variant="title"
+                color="white"
+                w="39px"
+                h="20px"
+                bg="primary.500"
+                borderRadius="15px"
+                textAlign="center"
+                lineHeight="20px"
+              >
+                4.5
+              </Heading>
+              <RadiostarIcon boxSize={4} color="primary.500" />
+              <RadiostarIcon boxSize={4} color="primary.500" />
+              <RadiostarIcon boxSize={4} color="primary.500" />
+              <RadiostarIcon boxSize={4} color="primary.500" />
+              <RadiostarIcon boxSize={4} color="gray.400" />
+            </Flex>
+            <HStack w="150px" justifyContent="space-between">
+              <SubtractIcon w="10px" h="45px" color="primary.500" />
+              <SubtractIcon w="10px" h="45px" color="primary.500" />
+              <SubtractIcon w="10px" h="45px" color="primary.500" />
+              <SubtractIcon w="10px" h="45px" color="primary.500" />
+              <SubtractIcon w="10px" h="45px" color="primary.500" />
+            </HStack>
+          </Flex>
+        </Box>
+        <Box p="20px 0">
+          <ReviewContent />
+          <ReviewContent />
+          <ReviewContent />
+          <ReviewContent />
         </Box>
       </Container>
     </Container>

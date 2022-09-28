@@ -686,6 +686,16 @@ export const RadiostarIcon = (props: IconProps) => (
     />
   </Icon>
 );
+export const SubtractIcon = (props: IconProps) => (
+  <Icon viewBox="0 0 10 45" {...props}>
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M5 0C2.23858 0 0 2.23858 0 5V45H10V5C10 2.23858 7.76142 0 5 0Z"
+      fill="#FF710B"
+    />
+  </Icon>
+);
 export const SunIcon = (props: IconProps) => (
   <Icon viewBox="0 0 24 24" {...props}>
     <circle cx={12} cy={12} r={5} />
