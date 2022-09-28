@@ -1,4 +1,8 @@
+import Link from 'next/link';
+
 import { Box, Button, Heading } from '@chakra-ui/react';
+
+import { ROUTES } from '@constants/routes';
 
 const EmptyCart = () => {
   return (
@@ -8,9 +12,11 @@ const EmptyCart = () => {
         <br />
         상품을 추가해보세요!
       </Heading>
-      <Button variant="orange" w="180px" m="30px 0">
-        상품보러가기
-      </Button>
+      <Link href={ROUTES.PRODUCT.MAIN}>
+        <Button variant="orange" w="180px" m="30px 0">
+          상품보러가기
+        </Button>
+      </Link>
     </Box>
   );
 };
