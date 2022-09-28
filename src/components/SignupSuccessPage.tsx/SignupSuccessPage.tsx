@@ -1,4 +1,8 @@
+import Link from 'next/link';
+
 import { Button, Container, Heading, Text, VStack } from '@chakra-ui/react';
+
+import { ROUTES } from '@constants/routes';
 
 import { HandsClappingIcon } from 'generated/icons/CustomIcon';
 
@@ -19,9 +23,11 @@ const SignupSuccessPage = () => {
           mt="100px"
           mb="200px"
         ></HandsClappingIcon>
-        <Button variant="orange" m="30px 0">
-          완료
-        </Button>
+        <Link href={ROUTES.HOME}>
+          <Button variant="orange" m="30px 0">
+            완료
+          </Button>
+        </Link>
       </VStack>
     </Container>
   );

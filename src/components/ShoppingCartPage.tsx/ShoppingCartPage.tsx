@@ -4,8 +4,8 @@ import ProductsCart from './_fragments/ProductsCart';
 const ShoppingCartPage = () => {
   return (
     <>
-      {/* <EmptyCart /> */}
-      <ProductsCart />
+      <EmptyCart />
+      {/* <ProductsCart /> */}
     </>
   );
 };
