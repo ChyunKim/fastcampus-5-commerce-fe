@@ -317,20 +317,20 @@ export const LogoutIcon = (props: IconProps) => (
     </defs>
   </Icon>
 );
+export const MinusIcon = (props: IconProps) => (
+  <Icon viewBox="0 0 25 26" {...props}>
+    <path d="M17 12.5H8V13.5H17V12.5Z" fill="#4A4D55" />
+  </Icon>
+);
 export const MoonIcon = (props: IconProps) => (
   <Icon viewBox="0 0 24 24" {...props}>
     <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
   </Icon>
 );
 export const PlusIcon = (props: IconProps) => (
-  <Icon viewBox="0 0 20 20" {...props}>
-    <path d="M10 1V19" stroke="#FF710B" strokeWidth={2} strokeLinecap="round" />
-    <path
-      d="M19 10L1 10"
-      stroke="#FF710B"
-      strokeWidth={2}
-      strokeLinecap="round"
-    />
+  <Icon viewBox="0 0 25 26" {...props}>
+    <path d="M17 12.75H8V13.75H17V12.75Z" fill="#4A4D55" />
+    <path d="M13 17.75V8.75H12V17.75H13Z" fill="#4A4D55" />
   </Icon>
 );
 export const ProcessIcon = (props: IconProps) => (
@@ -760,6 +760,22 @@ export const UpwardArrowIcon = (props: IconProps) => (
       d="M25.539 20.949V32.5H24.461V20.948V19.7407L23.6074 20.5945L18.455 25.7479L17.7071 25L25 17.7071L32.2929 25L31.545 25.7479L26.3926 20.5954L25.539 19.7419V20.949Z"
       fill="#1A1A1A"
       stroke="#1A1A1A"
+    />
+  </Icon>
+);
+export const XIcon = (props: IconProps) => (
+  <Icon viewBox="0 0 20 20" {...props}>
+    <path
+      d="M5 5L14.4314 14.4314"
+      stroke="#1A1A1A"
+      strokeWidth={2}
+      strokeLinecap="round"
+    />
+    <path
+      d="M14.4307 5L4.99927 14.4314"
+      stroke="#1A1A1A"
+      strokeWidth={2}
+      strokeLinecap="round"
     />
   </Icon>
 );

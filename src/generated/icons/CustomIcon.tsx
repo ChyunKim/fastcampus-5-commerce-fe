@@ -1,5 +1,21 @@
 import { Icon, IconProps } from '@chakra-ui/react';
 
+export const XIcon = (props: IconProps) => (
+  <Icon viewBox="0 0 20 20" {...props}>
+    <path
+      d="M5 5L14.4314 14.4314"
+      stroke="#1A1A1A"
+      strokeWidth={2}
+      strokeLinecap="round"
+    />
+    <path
+      d="M14.4307 5L4.99927 14.4314"
+      stroke="#1A1A1A"
+      strokeWidth={2}
+      strokeLinecap="round"
+    />
+  </Icon>
+);
 export const CheckBoxIcon = (props: IconProps) => (
   <Icon viewBox="0 0 20 20" {...props}>
     <path
@@ -12,15 +28,30 @@ export const CheckBoxIcon = (props: IconProps) => (
       stroke="#CBCED6"
       fill="none"
     />
+  </Icon>
+);
 
-    <path
-      d="M4.38989 9.75208L8.7309 13.965L14.9989 6.61597"
-      stroke="white"
+export const ChekedBoxIcon = (props: IconProps) => (
+  <Icon viewBox="0 0 20 20" {...props}>
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
       fill="none"
-      strokeWidth={2.5}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M16 0H4C1.79086 0 0 1.79086 0 4V16C0 18.2091 1.79086 20 4 20H16C18.2091 20 20 18.2091 20 16V4C20 1.79086 18.2091 0 16 0Z"
+        fill="#FF710B"
+      />
+      <path
+        d="M4.38989 9.75208L8.7309 13.965L14.9989 6.61597"
+        stroke="white"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
   </Icon>
 );
 export const SubtractIcon = (props: IconProps) => (
@@ -714,6 +745,17 @@ export const PlusIcon = (props: IconProps) => (
       strokeWidth={2}
       strokeLinecap="round"
     />
+  </Icon>
+);
+export const MinusIcon = (props: IconProps) => (
+  <Icon viewBox="0 0 25 26" {...props}>
+    <path d="M17 12.5H8V13.5H17V12.5Z" fill="#4A4D55" />
+  </Icon>
+);
+export const ProductPlusIcon = (props: IconProps) => (
+  <Icon viewBox="0 0 25 26" {...props}>
+    <path d="M17 12.75H8V13.75H17V12.75Z" fill="#4A4D55" />
+    <path d="M13 17.75V8.75H12V17.75H13Z" fill="#4A4D55" />
   </Icon>
 );
 export const ProfileIcon = (props: IconProps) => (
