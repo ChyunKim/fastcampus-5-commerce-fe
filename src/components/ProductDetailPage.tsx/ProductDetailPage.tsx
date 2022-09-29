@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
 import { MY_IMAGES } from '@image';
 
@@ -38,6 +38,9 @@ const ProductDetailPage = () => {
   ]);
 
   const [viewDetail, setViewDetail] = React.useState('470px');
+  const detailRef = useRef<HTMLDivElement>(null);
+  const deliveryRef = useRef<HTMLDivElement>(null);
+  const reviewRef = useRef<HTMLDivElement>(null);
 
   return (
     <Container mt="110px" mb="80px" p="0">
@@ -52,6 +55,7 @@ const ProductDetailPage = () => {
           onClick={(e) => {
             setTabColor(['primary.500', 'gray.600', 'gray.600']);
             setTabFontWeight(['700', '400', '400']);
+            detailRef.current?.scrollIntoView({ behavior: 'smooth' });
           }}
         >
           상세정보
@@ -63,6 +67,7 @@ const ProductDetailPage = () => {
           onClick={() => {
             setTabColor(['gray.600', 'primary.500', 'gray.600']);
             setTabFontWeight(['400', '700', '400']);
+            deliveryRef.current?.scrollIntoView({ behavior: 'smooth' });
           }}
         >
           구매정보
@@ -74,12 +79,13 @@ const ProductDetailPage = () => {
           onClick={() => {
             setTabColor(['gray.600', 'gray.600', 'primary.500']);
             setTabFontWeight(['400', '400', '700']);
+            reviewRef.current?.scrollIntoView({ behavior: 'smooth' });
           }}
         >
           리뷰(73)
         </Text>
       </Flex>
-      <Container p="50px 0">
+      <Container p="50px 0" ref={detailRef}>
         <Box h={viewDetail} overflow="hidden" pb="30px">
           <Image src={MY_IMAGES.IMAGES.OILDETAIL.src} />
         </Box>
@@ -102,13 +108,20 @@ const ProductDetailPage = () => {
         </Box>
       </Container>
       <Container>
-        <Flex p="16px 0" justifyContent="space-between" alignItems="center">
-          <Heading variant="title">주문 및 배송 안내</Heading>
-          <ToggleDownIcon boxSize={6} />
-        </Flex>
-        <Box borderTop="1px solid" borderColor="gray.200"></Box>
+        <Box ref={deliveryRef}>
+          <Flex
+            p="16px 0"
+            justifyContent="space-between"
+            alignItems="center"
+            borderBottom="1px solid"
+            borderColor="gray.200"
+          >
+            <Heading variant="title">주문 및 배송 안내</Heading>
+            <ToggleDownIcon boxSize={6} />
+          </Flex>
+        </Box>
       </Container>
-      <Container p="50px 16px">
+      <Container p="50px 16px" ref={reviewRef}>
         <Flex justifyContent="space-between" alignItems="center">
           <Heading variant="title">
             리뷰{' '}
