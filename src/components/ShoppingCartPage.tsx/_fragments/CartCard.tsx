@@ -3,14 +3,14 @@ import React from 'react';
 
 import { Box, Container, Flex, Heading, Text } from '@chakra-ui/react';
 
+import NumberBox from '@components/common/@Layout/ProductLayout/NumberBox';
+
 import {
-  CheckBoxIcon,
   ChekedBoxIcon,
-  PlusIcon,
   ProductPlusIcon,
   XIcon,
 } from 'generated/icons/CustomIcon';
-import { MinusIcon, ProductimgIcon } from 'generated/icons/MyIcons';
+import { ProductimgIcon } from 'generated/icons/MyIcons';
 
 const CartCard = () => {
   return (
@@ -29,31 +29,8 @@ const CartCard = () => {
         </Box>
         <XIcon />
       </Flex>
-      <Box bg="gray.200" w="313px" p="10px" m="0 auto">
-        <Text fontSize="16px" color="gray.600">
-          바스 & 샴푸 | 120ml
-        </Text>
-        <Flex m="5px 0" justifyContent="space-between" alignItems="center">
-          <Flex>
-            <MinusIcon bg="white" borderRadius="5px" w="25px" h="25px" />
-            <Box
-              bg="white"
-              color="gray.800"
-              fontSize="12px"
-              w="25px"
-              h="25px"
-              textAlign="center"
-              m="0 -2px"
-              lineHeight="25px"
-            >
-              1
-            </Box>
-            <ProductPlusIcon bg="white" borderRadius="5px" w="25px" h="25px" />
-          </Flex>
-          <Heading variant="title" color="gray.600">
-            54,200원
-          </Heading>
-        </Flex>
+      <Box w="313px">
+        <NumberBox />
       </Box>
       <Box w="313px" m="0 auto">
         <Flex justifyContent="space-between" p="15px 0">

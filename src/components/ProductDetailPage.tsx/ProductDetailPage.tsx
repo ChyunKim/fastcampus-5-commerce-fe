@@ -12,8 +12,10 @@ import {
   Heading,
   Image,
   Text,
+  useDisclosure,
 } from '@chakra-ui/react';
 
+import ProductDrawer from './_fragments/ProductDrawer';
 import ReviewContent from './_fragments/ReviewContent';
 
 import {
@@ -41,14 +43,22 @@ const ProductDetailPage = () => {
   const detailRef = useRef<HTMLDivElement>(null);
   const deliveryRef = useRef<HTMLDivElement>(null);
   const reviewRef = useRef<HTMLDivElement>(null);
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <Container mt="110px" mb="80px" p="0">
       <Center>
         <ProductimgIcon w="343px" h="350px" />
       </Center>
-      <Container borderTopRadius="20px" boxShadow="0 0 10px 0 #1A1A1A10">
-        <HStack pt="45px" alignItems="center" mb="14px">
+      <Container
+        borderTopRadius="20px"
+        boxShadow="0 0 10px 0 #1A1A1A10"
+        pt="10px"
+      >
+        <Center>
+          <Box w="50px" h="5px" bg="gray.200" borderRadius="2.5px" mb="30px" />
+        </Center>
+        <HStack alignItems="center" mb="14px">
           <Heading variant="titlelarge">인코스런 로션</Heading>
           <Text color="gray.600">200ml</Text>
         </HStack>
@@ -84,10 +94,13 @@ const ProductDetailPage = () => {
             border="1px solid"
             borderColor="primary.500"
             mb="10px"
+            onClick={onOpen}
           >
             장바구니
           </Button>
-          <Button variant="orange">바로구매</Button>
+          <Button variant="orange" onClick={onOpen}>
+            바로구매
+          </Button>
         </Box>
       </Container>
       <Flex fontSize="16px" justifyContent="space-around" p="26px 16px">
@@ -224,6 +237,7 @@ const ProductDetailPage = () => {
           <ReviewContent />
         </Box>
       </Container>
+      <ProductDrawer isOpen={isOpen} onClose={onClose} />
     </Container>
   );
 };
