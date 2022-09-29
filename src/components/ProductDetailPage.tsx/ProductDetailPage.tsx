@@ -131,11 +131,11 @@ const ProductDetailPage = () => {
             건
           </Heading>
           <HStack>
-            <HStack bg="gray.200" p="6px 10px" minW="86px">
+            <HStack bg="gray.200" p="6px 10px" minW="86px" borderRadius="5px">
               <Heading variant="titlesmall">최신순</Heading>
               <ToggleDownIcon w="17px" h="28px" />
             </HStack>
-            <HStack bg="gray.200" p="6px 10px">
+            <HStack bg="gray.200" p="6px 10px" borderRadius="5px">
               <Heading variant="titlesmall">전체보기</Heading>
               <ToggleDownIcon w="17px" h="28px" />
             </HStack>
