@@ -47,7 +47,50 @@ const ProductDetailPage = () => {
       <Center>
         <ProductimgIcon w="343px" h="350px" />
       </Center>
-      <Flex fontSize="16px" justifyContent="space-around">
+      <Container borderTopRadius="20px" boxShadow="0 0 10px 0 #1A1A1A10">
+        <HStack pt="45px" alignItems="center" mb="14px">
+          <Heading variant="titlelarge">인코스런 로션</Heading>
+          <Text color="gray.600">200ml</Text>
+        </HStack>
+        <Heading variant="titlelarge" color="primary.500">
+          27,000
+          <Text as="span" color="black" fontWeight="400">
+            원
+          </Text>
+        </Heading>
+        <Heading variant="titlesmall" color="gray.800">
+          3만원 이상 구매시{' '}
+          <Heading variant="titlesmall" as="span" color="primary.500">
+            무료배송
+          </Heading>
+        </Heading>
+        <Text m="10px 0" fontSize="16px">
+          순하고 마일드한 안심 처방으로 피부가 민감하고
+          <br />
+          연약한 우리 아이를 위한 고보습 로션
+        </Text>
+        <Flex alignItems="center" mb="15px">
+          <RadiostarIcon color="primary.500" mr="5px" />
+          <Heading variant="title" mr="3px">
+            4.3
+          </Heading>
+          <Text color="gray.700">(리뷰 125개)</Text>
+        </Flex>
+        <Box p="5px 0">
+          <Button
+            variant="orange"
+            color="primary.500"
+            bg="white"
+            border="1px solid"
+            borderColor="primary.500"
+            mb="10px"
+          >
+            장바구니
+          </Button>
+          <Button variant="orange">바로구매</Button>
+        </Box>
+      </Container>
+      <Flex fontSize="16px" justifyContent="space-around" p="26px 16px">
         <Text
           fontWeight={tabFontWeight[0]}
           color={tabColor[0]}
