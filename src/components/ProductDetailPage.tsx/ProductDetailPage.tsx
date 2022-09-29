@@ -98,7 +98,7 @@ const ProductDetailPage = () => {
                 : setViewDetail('470px')
             }
           >
-            상세정보 펼쳐보기{' '}
+            상세정보 펼쳐보기
             {viewDetail === '470px' ? (
               <ToggleDownIcon boxSize={6} m="0 5px" />
             ) : (
@@ -108,21 +108,24 @@ const ProductDetailPage = () => {
         </Box>
       </Container>
       <Container>
-        <Box ref={deliveryRef}>
-          <Flex
-            p="16px 0"
-            justifyContent="space-between"
-            alignItems="center"
-            borderBottom="1px solid"
-            borderColor="gray.200"
-          >
-            <Heading variant="title">주문 및 배송 안내</Heading>
-            <ToggleDownIcon boxSize={6} />
-          </Flex>
-        </Box>
+        <Flex
+          p="16px 0"
+          justifyContent="space-between"
+          alignItems="center"
+          ref={deliveryRef}
+        >
+          <Heading variant="title">주문 및 배송 안내</Heading>
+          <ToggleDownIcon boxSize={6} />
+        </Flex>
       </Container>
-      <Container p="50px 16px" ref={reviewRef}>
-        <Flex justifyContent="space-between" alignItems="center">
+      <Container ref={reviewRef}>
+        <Flex
+          p="50px 0"
+          justifyContent="space-between"
+          alignItems="center"
+          borderTop="1px solid"
+          borderColor="gray.200"
+        >
           <Heading variant="title">
             리뷰{' '}
             <Heading as="span" variant="title" color="primary.500">
