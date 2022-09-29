@@ -87,15 +87,7 @@ const ProductDetailPage = () => {
           <Text color="gray.700">(리뷰 125개)</Text>
         </Flex>
         <Box p="5px 0">
-          <Button
-            variant="orange"
-            color="primary.500"
-            bg="white"
-            border="1px solid"
-            borderColor="primary.500"
-            mb="10px"
-            onClick={onOpen}
-          >
+          <Button variant="white_orange" mb="10px" onClick={onOpen}>
             장바구니
           </Button>
           <Button variant="orange" onClick={onOpen}>

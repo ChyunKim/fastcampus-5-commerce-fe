@@ -104,16 +104,26 @@ export const Button: ComponentSingleStyleConfig = {
       fontSize: '16px',
       cursor: 'pointer',
     },
-    white : {
+    white: {
       bg: 'white',
       w: '100%',
       h: '50px',
       color: 'black',
       borderRadius: '25px',
-      border : '1px solid',
+      border: '1px solid',
       fontSize: '16px',
       cursor: 'pointer',
-    }
+    },
+    white_orange: {
+      bg: 'white',
+      w: '100%',
+      h: '50px',
+      color: 'primary.500',
+      borderRadius: '25px',
+      border: '1px solid',
+      fontSize: '16px',
+      cursor: 'pointer',
+    },
   },
   sizes: {
     lg: {

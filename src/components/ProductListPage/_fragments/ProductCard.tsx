@@ -12,7 +12,10 @@ import {
   Heading,
   Image,
   Text,
+  useDisclosure,
 } from '@chakra-ui/react';
+
+import ProductDrawer from '@components/ProductDetailPage.tsx/_fragments/ProductDrawer';
 
 import { ROUTES } from '@constants/routes';
 
@@ -20,6 +23,8 @@ import { RadiostarIcon } from 'generated/icons/CustomIcon';
 
 const ProductCard = () => {
   const router = useRouter();
+  const { onOpen, isOpen, onClose } = useDisclosure();
+
   return (
     <Container
       w="343px"
@@ -74,20 +79,14 @@ const ProductCard = () => {
         </Box>
       </Box>
       <Flex justifyContent="space-around" p="0 16px">
-        <Button variant="orange" w="150px">
+        <Button variant="orange" mr="10px" onClick={onOpen}>
           바로구매
         </Button>
-        <Button
-          w="150px"
-          variant="orange"
-          bg="white"
-          color="primary.500"
-          border="1px solid"
-          borderColor="primary.500"
-        >
+        <Button variant="white_orange" onClick={onOpen}>
           장바구니
         </Button>
       </Flex>
+      <ProductDrawer isOpen={isOpen} onClose={onClose} />
     </Container>
   );
 };
