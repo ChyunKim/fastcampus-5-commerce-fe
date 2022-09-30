@@ -30,7 +30,6 @@ const OrderInfoForm = ({
     <Container as="form" mb="80px" onSubmit={onSubmit} {...basicProps}>
       <Box>
         <Heading variant="title">회원정보입력</Heading>
-        <ProfileIcon w="343px" h="70px" m="40px 0" />
         <FormCustom label="이름" errorText={errors.username?.message}>
           <Input
             variant="formstyled"
