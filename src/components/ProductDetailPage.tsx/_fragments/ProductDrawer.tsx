@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import {
   Box,
   Button,
@@ -12,6 +14,8 @@ import {
 } from '@chakra-ui/react';
 
 import NumberBox from '@components/common/@Layout/ProductLayout/NumberBox';
+
+import { ROUTES } from '@constants/routes';
 
 interface HomeHeaderDrawerProps extends Omit<DrawerProps, 'children'> {
   bodyProps?: ChakraProps;
@@ -32,10 +36,14 @@ const ProductDrawer = ({ bodyProps, ...basisProps }: HomeHeaderDrawerProps) => {
             개
           </Text>
           <Flex justifyContent="space-between" pt="10px">
-            <Button variant="white_orange" mr="10px">
-              장바구니
-            </Button>
-            <Button variant="orange">바로구매</Button>
+            <Link href={ROUTES.SHOPPINGCART.MAIN}>
+              <Button variant="white_orange" mr="10px">
+                장바구니
+              </Button>
+            </Link>
+            <Link href={ROUTES.ORDER.MAIN}>
+              <Button variant="orange">바로구매</Button>
+            </Link>
           </Flex>
         </DrawerBody>
       </DrawerContent>

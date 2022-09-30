@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import {
   Box,
   Button,
@@ -7,6 +9,8 @@ import {
   Heading,
   Text,
 } from '@chakra-ui/react';
+
+import { ROUTES } from '@constants/routes';
 
 import CartCard from './CartCard';
 
@@ -61,9 +65,11 @@ const ProductsCart = () => {
             108,000원
           </Heading>
         </Flex>
-        <Button variant="orange" m="20px 0">
-          결제하기
-        </Button>
+        <Link href={ROUTES.ORDER.MAIN}>
+          <Button variant="orange" m="20px 0">
+            결제하기
+          </Button>
+        </Link>
       </Box>
     </Container>
   );

@@ -1,4 +1,4 @@
-import React, { Props, PropsWithChildren, forwardRef } from 'react';
+import React from 'react';
 
 import { MY_IMAGES } from '@image';
 
