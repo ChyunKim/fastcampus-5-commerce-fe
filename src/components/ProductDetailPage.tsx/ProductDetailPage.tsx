@@ -40,6 +40,7 @@ const ProductDetailPage = () => {
   ]);
 
   const [viewDetail, setViewDetail] = React.useState('470px');
+  const [viewDelivery, setViewDelivery] = React.useState('60px');
   const detailRef = useRef<HTMLDivElement>(null);
   const deliveryRef = useRef<HTMLDivElement>(null);
   const reviewRef = useRef<HTMLDivElement>(null);
@@ -156,15 +157,47 @@ const ProductDetailPage = () => {
         </Box>
       </Container>
       <Container>
-        <Flex
-          p="16px 0"
-          justifyContent="space-between"
-          alignItems="center"
-          ref={deliveryRef}
-        >
-          <Heading variant="title">주문 및 배송 안내</Heading>
-          <ToggleDownIcon boxSize={6} />
-        </Flex>
+        <Box h={viewDelivery} overflow="hidden">
+          <Flex
+            p="16px 0"
+            justifyContent="space-between"
+            alignItems="center"
+            ref={deliveryRef}
+          >
+            <Heading variant="title">주문 및 배송 안내</Heading>
+            <Button
+              onClick={() =>
+                viewDelivery === '60px'
+                  ? setViewDelivery('auto')
+                  : setViewDelivery('60px')
+              }
+            >
+              {' '}
+              {viewDelivery === '60px' ? (
+                <ToggleDownIcon boxSize={6} m="0 5px" />
+              ) : (
+                <ToggleUpIcon boxSize={6} m="0 5px" />
+              )}
+            </Button>
+          </Flex>
+          <Box>
+            <Heading variant="title" mt="14px" mb="10px">
+              [주문 및 배송 안내]
+            </Heading>
+            <Text fontSize="16px" mt="10px">
+              배송방법 : 인코스런 택배
+            </Text>
+            <Text fontSize="16px" mt="10px">
+              배송지역 : 전국
+            </Text>
+            <Text fontSize="16px" mt="10px">
+              배송비용 : 단품 상품 구매 시 3,000배송비 발생
+            </Text>
+            <Text fontSize="16px" ml="70px" mb="20px">
+              그외 단품 묶음 구매의 경우 30,000원 이상 구매 시 무료배송
+            </Text>
+          </Box>
+        </Box>
       </Container>
       <Container ref={reviewRef}>
         <Flex
