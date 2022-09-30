@@ -4,7 +4,7 @@ import { MinusIcon, ProductPlusIcon } from 'generated/icons/CustomIcon';
 
 const NumberBox = () => {
   return (
-    <Box bg="gray.200" p="10px" m="0 auto">
+    <Box bg="gray.200" p="10px" m="0 auto" borderRadius="5px">
       <Text fontSize="16px" color="gray.600">
         바스 & 샴푸 | 120ml
       </Text>

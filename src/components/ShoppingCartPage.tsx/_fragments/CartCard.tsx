@@ -29,10 +29,10 @@ const CartCard = () => {
         </Box>
         <XIcon />
       </Flex>
-      <Box w="313px">
+      <Box w="313px" ml="30px">
         <NumberBox />
       </Box>
-      <Box w="313px" m="0 auto">
+      <Box w="313px" ml="30px">
         <Flex justifyContent="space-between" p="15px 0">
           <Text fontSize="16px">배송비 무료</Text>
           <Heading variant="titlelarge">54,000원</Heading>

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { Props, PropsWithChildren, forwardRef } from 'react';
 
 import { MY_IMAGES } from '@image';
 
@@ -41,9 +41,9 @@ const ProductDetailPage = () => {
 
   const [viewDetail, setViewDetail] = React.useState('470px');
   const [viewDelivery, setViewDelivery] = React.useState('60px');
-  const detailRef = useRef<HTMLDivElement>(null);
-  const deliveryRef = useRef<HTMLDivElement>(null);
-  const reviewRef = useRef<HTMLDivElement>(null);
+  const detailRef = React.useRef<HTMLDivElement>(null);
+  const deliveryRef = React.useRef<HTMLDivElement>(null);
+  const reviewRef = React.useRef<HTMLDivElement>(null);
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
@@ -268,3 +268,6 @@ const ProductDetailPage = () => {
 };
 
 export default ProductDetailPage;
+function foewardRef(arg0: any) {
+  throw new Error('Function not implemented.');
+}

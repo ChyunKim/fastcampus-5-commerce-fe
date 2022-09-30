@@ -47,9 +47,9 @@ export const ChekedBoxIcon = (props: IconProps) => (
       <path
         d="M4.38989 9.75208L8.7309 13.965L14.9989 6.61597"
         stroke="white"
-        stroke-width="2.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   </Icon>

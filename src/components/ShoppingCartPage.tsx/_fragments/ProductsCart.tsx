@@ -48,7 +48,13 @@ const ProductsCart = () => {
           <Text>총 배송비</Text>
           <Text>0 원</Text>
         </Flex>
-        <Box border="1px solid" borderColor="gray.200" m="20px 0" pb="10px" />
+        <Box
+          border="1px solid"
+          borderColor="gray.200"
+          m="20px 0"
+          bg="gray.200"
+          h="0px"
+        />
         <Flex fontSize="16px" justifyContent="space-between" m="10px 0">
           <Text>결제금액</Text>
           <Heading variant="title" color="primary.500">
