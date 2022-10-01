@@ -13,8 +13,6 @@ import FormCustom from '@components/SignupPage/_fragments/FormCustom';
 
 import { OrderProps } from '../_hooks/useOrderForm';
 
-import { ProfileIcon } from 'generated/icons/CustomIcon';
-
 interface FormData extends BoxProps {
   formData: UseFormReturn<OrderProps>;
 }
@@ -42,6 +40,33 @@ const OrderInfoForm = ({
             variant="formstyled"
             autoComplete="off"
             {...register('phone')}
+          />
+        </FormCustom>
+        <FormCustom label="주소" errorText={errors.address?.message}>
+          <Input
+            variant="formstyled"
+            autoComplete="off"
+            w="249px"
+            {...register('address')}
+          />
+          <Button
+            ml="10px"
+            bg="primary.500"
+            borderRadius="5px"
+            color="white"
+            fontSize="12px"
+            w="84px"
+            _hover={{
+              bg: 'primary.500',
+            }}
+          >
+            우편번호 검색
+          </Button>
+          <Input
+            mt="10px"
+            variant="formstyled"
+            autoComplete="off"
+            {...register('address')}
           />
         </FormCustom>
       </Box>

@@ -7,6 +7,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 export interface OrderProps {
   username: string;
   phone: number;
+  address: string;
 }
 
 export const formSchema = yup.object().shape({
@@ -22,6 +23,7 @@ export const formSchema = yup.object().shape({
       '정확한 핸드폰 번호를 입력해주세요.',
       (val) => !Number.isNaN(Number(val)),
     ),
+  address: yup.string().required('해당 항목은 필수값 입니다.'),
 });
 
 const useOrderForm = (options?: UseFormProps<OrderProps>) => {
