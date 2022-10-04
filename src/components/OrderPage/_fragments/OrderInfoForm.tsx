@@ -37,9 +37,9 @@ const OrderInfoForm = ({
 }: FormData) => {
   return (
     <Container as="form" mb="80px" onSubmit={onSubmit} {...basicProps}>
-      <Box>
+      <Box mt="40px" borderBottom="1px solid" borderColor="gray.200">
         <Heading variant="title" mb="40px">
-          회원정보입력
+          주문자 정보
         </Heading>
         <FormCustom label="이름" errorText={errors.username?.message}>
           <Input
@@ -91,7 +91,7 @@ const OrderInfoForm = ({
           />
         </FormCustom>
       </Box>
-      <Box>
+      <Box mt="50px" borderBottom="1px solid" borderColor="gray.200">
         <Flex justifyContent="space-between" alignItems="center" mb="40px">
           <Heading variant="title">배송지 정보</Heading>
           <HStack>
@@ -149,7 +149,7 @@ const OrderInfoForm = ({
           />
         </FormCustom>
       </Box>
-      <Box mt="90px">
+      <Box mt="40px">
         <Heading
           variant="title"
           borderBottom="1px solid"
