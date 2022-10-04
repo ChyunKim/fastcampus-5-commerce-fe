@@ -37,6 +37,7 @@ export const ROUTES = {
     MAIN: '/shoppingcart',
   },
   ORDER : {
-    MAIN : '/order-product'
+    MAIN : '/order-product',
+    ORDERCOMPLETE : '/order-product/complete'
   }
 } as const;
