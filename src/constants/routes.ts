@@ -38,6 +38,9 @@ export const ROUTES = {
   },
   ORDER : {
     MAIN : '/order-product',
-    ORDERCOMPLETE : '/order-product/complete'
+    ORDERCOMPLETE : '/order-product/complete',
+  },
+  MYACCOUNT : {
+    MAIN : '/myaccount'
   }
 } as const;

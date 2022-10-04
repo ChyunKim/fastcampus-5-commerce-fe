@@ -73,9 +73,11 @@ const HomeHeaderDrawer = ({
             </Link>
           </Box>
           <Box borderBottom="1px solid" borderColor="gray.200" p="16px 0">
-            <Heading variant="title" p="0 16px">
-              마이페이지
-            </Heading>
+            <Link href={ROUTES.MYACCOUNT.MAIN}>
+              <Heading variant="title" p="0 16px" cursor="pointer">
+                마이페이지
+              </Heading>
+            </Link>
           </Box>
         </DrawerBody>
         <DrawerFooter justifyContent="flex-start" p="25px 16px">
