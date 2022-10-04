@@ -1,4 +1,8 @@
+import Link from 'next/link';
+
 import { Box, Container, Flex, Heading, Text, VStack } from '@chakra-ui/react';
+
+import { ROUTES } from '@constants/routes';
 
 import {
   ListarrowIcon,
@@ -23,10 +27,12 @@ const MyAccountPage = () => {
         borderBottom="10px solid"
         borderColor="gray.200"
       >
-        <VStack>
-          <UserinfoIcon boxSize={50} />
-          <Text color="gray.800">회원정보수정</Text>
-        </VStack>
+        <Link href={ROUTES.MYACCOUNT.EDITUSERINFO}>
+          <VStack cursor="pointer">
+            <UserinfoIcon boxSize={50} />
+            <Text color="gray.800">회원정보수정</Text>
+          </VStack>
+        </Link>
         <VStack>
           <OrderlistIcon boxSize={50} /> <Text color="gray.800">주문내역</Text>
         </VStack>

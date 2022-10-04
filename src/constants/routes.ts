@@ -41,6 +41,7 @@ export const ROUTES = {
     ORDERCOMPLETE : '/order-product/complete',
   },
   MYACCOUNT : {
-    MAIN : '/myaccount'
+    MAIN : '/myaccount',
+    EDITUSERINFO :'/myaccount/edit-userinfo'
   }
 } as const;

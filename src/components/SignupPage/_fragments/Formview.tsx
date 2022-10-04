@@ -1,13 +1,17 @@
+import { useRouter } from 'next/router';
 import { UseFormReturn } from 'react-hook-form';
 
 import {
   Box,
   BoxProps,
   Button,
+  Flex,
   Heading,
   Input,
   Select,
 } from '@chakra-ui/react';
+
+import { ROUTES } from '@constants/routes';
 
 import { FormProps } from '../_hooks/useSignForm';
 import AgreeSignup from './AgreeSignup';
@@ -26,6 +30,7 @@ const FormView = ({
   onSubmit,
   ...basicProps
 }: FormData) => {
+  const router = useRouter();
   return (
     <Box as="form" p="50px 0" onSubmit={onSubmit} {...basicProps}>
       <Box>
@@ -94,10 +99,21 @@ const FormView = ({
           </Select>
         </FormCustom>
       </Box>
-      <AgreeSignup />
-      <Button variant="orange" type="submit">
-        회원가입 완료
-      </Button>
+      {router.asPath === ROUTES.LOGIN.signup && <AgreeSignup />}
+      {router.asPath === ROUTES.LOGIN.signup ? (
+        <Button variant="orange" type="submit">
+          회원가입 완료
+        </Button>
+      ) : (
+        <Flex>
+          <Button variant="white_orange" mr="10px">
+            취소
+          </Button>
+          <Button variant="orange" type="submit">
+            저장
+          </Button>
+        </Flex>
+      )}
     </Box>
   );
 };
