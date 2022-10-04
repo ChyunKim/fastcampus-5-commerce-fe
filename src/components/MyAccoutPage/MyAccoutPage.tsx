@@ -1,5 +1,62 @@
+import { Box, Container, Flex, Heading, Text, VStack } from '@chakra-ui/react';
+
+import {
+  ListarrowIcon,
+  MyreviewIcon,
+  OrderlistIcon,
+  UserinfoIcon,
+} from 'generated/icons/CustomIcon';
+
 const MyAccountPage = () => {
-  return <>마이페이지</>;
+  return (
+    <Container mt="150px" mb="30px" p="0">
+      <Box p=" 0 16px" borderBottom="10px solid" borderColor="gray.200">
+        <Heading variant="title">김인코스런</Heading>
+        <Text color="gray.400" mb="30px">
+          incourse.run@gmail.com
+        </Text>
+      </Box>
+      <Flex
+        justifyContent="space-around"
+        alignItems="center"
+        p="30px 0"
+        borderBottom="10px solid"
+        borderColor="gray.200"
+      >
+        <VStack>
+          <UserinfoIcon boxSize={50} />
+          <Text color="gray.800">회원정보수정</Text>
+        </VStack>
+        <VStack>
+          <OrderlistIcon boxSize={50} /> <Text color="gray.800">주문내역</Text>
+        </VStack>
+        <VStack>
+          <MyreviewIcon boxSize={50} />
+          <Text color="gray.800">내 상품 리뷰</Text>
+        </VStack>
+      </Flex>
+      <Flex
+        p="16px"
+        justifyContent="space-between"
+        alignItems="center"
+        borderBottom="1px solid"
+        borderColor="gray.200"
+      >
+        <Text> 회원탈퇴</Text>
+        <ListarrowIcon boxSize={6} />
+      </Flex>
+      <Flex
+        p="16px"
+        justifyContent="space-between"
+        alignItems="center"
+        borderBottom="1px solid"
+        borderColor="gray.200"
+      >
+        <Text> 로그아웃</Text>
+        <ListarrowIcon boxSize={6} />
+      </Flex>
+    </Container>
+  );
 };
 
 export default MyAccountPage;
