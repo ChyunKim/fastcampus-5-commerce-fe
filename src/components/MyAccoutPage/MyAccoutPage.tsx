@@ -33,9 +33,12 @@ const MyAccountPage = () => {
             <Text color="gray.800">회원정보수정</Text>
           </VStack>
         </Link>
-        <VStack>
-          <OrderlistIcon boxSize={50} /> <Text color="gray.800">주문내역</Text>
-        </VStack>
+        <Link href={ROUTES.MYACCOUNT.ORDERLIST}>
+          <VStack cursor="pointer">
+            <OrderlistIcon boxSize={50} />{' '}
+            <Text color="gray.800">주문내역</Text>
+          </VStack>
+        </Link>
         <VStack>
           <MyreviewIcon boxSize={50} />
           <Text color="gray.800">내 상품 리뷰</Text>

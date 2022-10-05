@@ -5,7 +5,7 @@ import FormPage from '@components/SignupPage/_fragments/FormPage';
 const EditUserInfoPage = () => {
   return (
     <Container mt="130px" mb="30px">
-      <Heading variant="title">회원정보수정</Heading>
+      <Heading variant="titlelarge">회원정보수정</Heading>
       <FormPage />
     </Container>
   );

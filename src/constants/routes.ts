@@ -36,12 +36,13 @@ export const ROUTES = {
   SHOPPINGCART: {
     MAIN: '/shoppingcart',
   },
-  ORDER : {
-    MAIN : '/order-product',
-    ORDERCOMPLETE : '/order-product/complete',
+  ORDER: {
+    MAIN: '/order-product',
+    ORDERCOMPLETE: '/order-product/complete',
   },
-  MYACCOUNT : {
-    MAIN : '/myaccount',
-    EDITUSERINFO :'/myaccount/edit-userinfo'
-  }
+  MYACCOUNT: {
+    MAIN: '/myaccount',
+    EDITUSERINFO: '/myaccount/edit-userinfo',
+    ORDERLIST: '/myaccount/order-list',
+  },
 } as const;
