@@ -26,7 +26,22 @@ import {
 } from 'generated/icons/CustomIcon';
 import { ProductimgIcon } from 'generated/icons/MyIcons';
 
-const ProductDetailPage = () => {
+interface DetailContentProps {
+  id: number;
+  name: string;
+  description: string;
+  price: string;
+  capacity: string;
+  detail: string;
+  photo: string;
+  reviewList: [];
+  avgRate: number;
+  reviewCount: number;
+}
+interface DetailComProps {
+  detail: DetailContentProps;
+}
+const ProductDetailPage = (props: DetailComProps) => {
   const [tabColor, setTabColor] = React.useState([
     'primary.500',
     'gray.600',
@@ -46,10 +61,17 @@ const ProductDetailPage = () => {
   const reviewRef = React.useRef<HTMLDivElement>(null);
   const { isOpen, onOpen, onClose } = useDisclosure();
 
+  console.log(props.detail);
+
+  const price = String(props.detail.price).replace(
+    /\B(?=(\d{3})+(?!\d))/g,
+    ',',
+  );
+
   return (
     <Container mt="110px" mb="80px" p="0">
       <Center>
-        <ProductimgIcon w="343px" h="350px" />
+        <Image w="343px" h="350px" src={props.detail.photo} />
       </Center>
       <Container
         borderTopRadius="20px"
@@ -60,11 +82,11 @@ const ProductDetailPage = () => {
           <Box w="50px" h="5px" bg="gray.200" borderRadius="2.5px" mb="30px" />
         </Center>
         <HStack alignItems="center" mb="14px">
-          <Heading variant="titlelarge">인코스런 로션</Heading>
-          <Text color="gray.600">200ml</Text>
+          <Heading variant="titlelarge">{props.detail.name}</Heading>
+          <Text color="gray.600">{props.detail.capacity}ml</Text>
         </HStack>
         <Heading variant="titlelarge" color="primary.500">
-          27,000
+          {price}
           <Text as="span" color="black" fontWeight="400">
             원
           </Text>
@@ -76,16 +98,14 @@ const ProductDetailPage = () => {
           </Heading>
         </Heading>
         <Text m="10px 0" fontSize="16px">
-          순하고 마일드한 안심 처방으로 피부가 민감하고
-          <br />
-          연약한 우리 아이를 위한 고보습 로션
+          {props.detail.description}
         </Text>
         <Flex alignItems="center" mb="15px">
-          <RadiostarIcon color="primary.500" mr="5px" />
-          <Heading variant="title" mr="3px">
-            4.3
+          <RadiostarIcon color="primary.500" mr="3px" />
+          <Heading variant="title" mr="5px">
+            {props.detail.avgRate ? props.detail.avgRate : '리뷰없음'}
           </Heading>
-          <Text color="gray.700">(리뷰 125개)</Text>
+          <Text color="gray.700">(리뷰 {props.detail.reviewCount}개)</Text>
         </Flex>
         <Box p="5px 0">
           <Button variant="white_orange" mb="10px" onClick={onOpen}>
@@ -131,7 +151,7 @@ const ProductDetailPage = () => {
             reviewRef.current?.scrollIntoView({ behavior: 'smooth' });
           }}
         >
-          리뷰(73)
+          리뷰({props.detail.reviewCount})
         </Text>
       </Flex>
       <Container p="50px 0" ref={detailRef}>
@@ -210,7 +230,7 @@ const ProductDetailPage = () => {
           <Heading variant="title">
             리뷰{' '}
             <Heading as="span" variant="title" color="primary.500">
-              78
+              {props.detail.reviewCount}
             </Heading>
             건
           </Heading>
@@ -256,10 +276,13 @@ const ProductDetailPage = () => {
           </Flex>
         </Box>
         <Box p="20px 0">
-          <ReviewContent />
-          <ReviewContent />
-          <ReviewContent />
-          <ReviewContent />
+          {props.detail.reviewCount ? (
+            <ReviewContent list={props.detail.reviewList} />
+          ) : (
+            <Text mt="17px" mb="9px">
+              등록된 리뷰가 없습니다.
+            </Text>
+          )}
         </Box>
       </Container>
       <ProductDrawer isOpen={isOpen} onClose={onClose} />
@@ -268,6 +291,3 @@ const ProductDetailPage = () => {
 };
 
 export default ProductDetailPage;
-function foewardRef(arg0: any) {
-  throw new Error('Function not implemented.');
-}

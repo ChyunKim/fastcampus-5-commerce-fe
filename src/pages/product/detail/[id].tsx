@@ -16,7 +16,9 @@ const ProductDetail = (
       <Head>
         <title>INCOUSERUN | 상품보기</title>
       </Head>
-      <HomeLayout content={<ProductDetailPage />} />
+      <HomeLayout
+        content={<ProductDetailPage detail={props.productDetail} />}
+      />
     </>
   );
 };
