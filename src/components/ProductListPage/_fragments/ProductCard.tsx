@@ -50,7 +50,7 @@ const ProductCard = (props: ProductComProps) => {
             src={ele.thumbnail}
             alt={ele.name}
             onClick={() => {
-              router.push(ROUTES.PRODUCT.DETAIL);
+              router.push(`${ROUTES.PRODUCT.DETAIL}/${ele.id}`);
             }}
           />
         </Box>

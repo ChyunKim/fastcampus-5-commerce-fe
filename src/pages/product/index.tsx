@@ -23,7 +23,7 @@ const ProductList: NextPage = (
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  let page = 4;
+  let page = 100;
   const res = await productApi.list(page);
   const productlist = res.data;
 

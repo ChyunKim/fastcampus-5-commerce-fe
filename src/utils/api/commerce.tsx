@@ -6,4 +6,5 @@ const api = axios.create({
 
 export const productApi = {
   list: (page: number) => api.get(`/v1/product/?page_size=${page}`),
+  detail: (id: number) => api.get(`/v1/product/${id}/`),
 };
