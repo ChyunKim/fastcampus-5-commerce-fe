@@ -1,3 +1,4 @@
+import type { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
 import { useRouter } from 'next/router';
 import React from 'react';
 
@@ -19,76 +20,90 @@ import ProductDrawer from '@components/ProductDetailPage.tsx/_fragments/ProductD
 
 import { ROUTES } from '@constants/routes';
 
+import { ProductComProps, ProductlistProps } from '../ProduceListPage';
+
 import { RadiostarIcon } from 'generated/icons/CustomIcon';
 
-const ProductCard = () => {
+interface tagProps {
+  id: number;
+  name: string;
+}
+const ProductCard = (props: ProductComProps) => {
   const router = useRouter();
   const { onOpen, isOpen, onClose } = useDisclosure();
 
-  return (
-    <Container
-      w="343px"
-      h="528px"
-      p="0"
-      borderRadius="20px"
-      boxShadow="0 0px 10px 0 #1A1A1A20"
-      mb="30px"
-    >
-      <Box h="250px">
-        <Image
-          src={MY_IMAGES.IMAGES.RECTANGLE_221.src}
-          alt={MY_IMAGES.IMAGES.RECTANGLE_221.alt}
-          onClick={() => {
-            router.push(ROUTES.PRODUCT.DETAIL);
-          }}
-        />
-      </Box>
-      <Box w="343px" p="20px 30px">
-        <HStack m="10px 0">
-          <Heading variant="title">바스 & 샴푸</Heading>
-          <Text as="span" color="gray.700">
-            300ml
-          </Text>
-        </HStack>
-        <Heading variant="titlelarge" color="primary.500">
-          27,000
-          <Text as="span" fontWeight="400" color="black">
-            원
-          </Text>
-        </Heading>
-        <Flex alignItems="center">
-          <RadiostarIcon color="primary.500" mr="5px" />
-          <Heading variant="title" mr="3px">
-            4.3
-          </Heading>
-          <Text color="gray.700">(리뷰 125개)</Text>
-        </Flex>
-        <Box color="gray.700" mt="25px">
-          <Text as="span" mr="5px">
-            # 올인원
-          </Text>
-          <Text as="span" mr="5px">
-            # 클렌저
-          </Text>
-          <Text as="span" mr="5px">
-            # 마일드
-          </Text>
-          <Text as="span" mr="5px">
-            # 바스앤샴푸
-          </Text>
+  const productlist = props.list.map((ele: ProductlistProps) => {
+    const price = String(ele.price).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+    return (
+      <Container
+        w="343px"
+        h="528px"
+        p="0"
+        borderRadius="20px"
+        boxShadow="0 0px 10px 0 #1A1A1A20"
+        mb="30px"
+        key={ele.id}
+      >
+        <Box h="250px">
+          <Image
+            src={ele.thumbnail}
+            alt={ele.name}
+            onClick={() => {
+              router.push(ROUTES.PRODUCT.DETAIL);
+            }}
+          />
         </Box>
-      </Box>
-      <Flex justifyContent="space-around" p="0 16px">
-        <Button variant="orange" mr="10px" onClick={onOpen}>
-          바로구매
-        </Button>
-        <Button variant="white_orange" onClick={onOpen}>
-          장바구니
-        </Button>
-      </Flex>
-      <ProductDrawer isOpen={isOpen} onClose={onClose} />
-    </Container>
-  );
+        <Box w="343px" p="20px 30px">
+          <HStack m="10px 0">
+            <Heading variant="title">{ele.name}</Heading>
+            <Text as="span" color="gray.700">
+              {ele.capacity}ml
+            </Text>
+          </HStack>
+          <Heading variant="titlelarge" color="primary.500">
+            {price}
+            <Text as="span" fontWeight="400" color="black">
+              원
+            </Text>
+          </Heading>
+          <Flex alignItems="center">
+            <RadiostarIcon color="primary.500" mr="3px" />
+            <Heading variant="title" mr="5px">
+              {ele.avgRate}
+            </Heading>
+            <Text color="gray.700" verticalAlign="-3px">
+              리뷰 {ele.reviewCount}개
+            </Text>
+          </Flex>
+          <Box color="gray.700" mt="25px">
+            {tagContent(ele.tags)}
+          </Box>
+        </Box>
+        <Flex justifyContent="space-around" p="0 16px">
+          <Button variant="orange" mr="10px" onClick={onOpen}>
+            바로구매
+          </Button>
+          <Button variant="white_orange" onClick={onOpen}>
+            장바구니
+          </Button>
+        </Flex>
+        <ProductDrawer isOpen={isOpen} onClose={onClose} />
+      </Container>
+    );
+  });
+  return <>{productlist}</>;
+};
+
+const tagContent = (tags: tagProps[]) => {
+  const tag = tags.map((ele) => {
+    return (
+      <Text as="span" mr="5px" key={ele.id}>
+        # {ele.name}
+      </Text>
+    );
+  });
+  return tag;
 };
 
 export default ProductCard;

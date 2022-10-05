@@ -2,14 +2,26 @@ import { Container } from '@chakra-ui/react';
 
 import ProductCard from './_fragments/ProductCard';
 
-const ProductListPage = () => {
+export interface ProductlistProps {
+  id: number;
+  name: string;
+  description: string;
+  price: number;
+  capacity: number;
+  thumbnail: string;
+  tags: [];
+  avgRate: string;
+  reviewCount: string;
+}
+
+export interface ProductComProps {
+  list: ProductlistProps[];
+}
+
+const ProductListPage = (props: ProductComProps) => {
   return (
     <Container mt="120px" mb="80px" bg="white">
-      <ProductCard />
-      <ProductCard />
-      <ProductCard />
-      <ProductCard />
-      <ProductCard />
+      <ProductCard list={props.list} />
     </Container>
   );
 };
