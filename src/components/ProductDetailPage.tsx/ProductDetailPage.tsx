@@ -16,7 +16,7 @@ import {
 } from '@chakra-ui/react';
 
 import ProductDrawer from './_fragments/ProductDrawer';
-import ReviewContent from './_fragments/ReviewContent';
+import ReviewContent, { rankReviwStar } from './_fragments/ReviewContent';
 
 import {
   RadiostarIcon,
@@ -68,6 +68,11 @@ const ProductDetailPage = (props: DetailComProps) => {
     ',',
   );
 
+  const rank = props.detail.avgRate
+    ? Number(props.detail.avgRate.toFixed(0))
+    : 0;
+
+  const rankreview = props.detail.avgRate ? props.detail.avgRate.toFixed(1) : 0;
   return (
     <Container mt="110px" mb="80px" p="0">
       <Center>
@@ -103,7 +108,7 @@ const ProductDetailPage = (props: DetailComProps) => {
         <Flex alignItems="center" mb="15px">
           <RadiostarIcon color="primary.500" mr="3px" />
           <Heading variant="title" mr="5px">
-            {props.detail.avgRate ? props.detail.avgRate : '리뷰없음'}
+            {props.detail.avgRate ? rankreview : '리뷰없음'}
           </Heading>
           <Text color="gray.700">(리뷰 {props.detail.reviewCount}개)</Text>
         </Flex>
@@ -258,13 +263,9 @@ const ProductDetailPage = (props: DetailComProps) => {
                 textAlign="center"
                 lineHeight="20px"
               >
-                4.5
+                {rankreview}
               </Heading>
-              <RadiostarIcon boxSize={4} color="primary.500" />
-              <RadiostarIcon boxSize={4} color="primary.500" />
-              <RadiostarIcon boxSize={4} color="primary.500" />
-              <RadiostarIcon boxSize={4} color="primary.500" />
-              <RadiostarIcon boxSize={4} color="gray.400" />
+              {rankReviwStar(rank)}
             </Flex>
             <HStack w="150px" justifyContent="space-between">
               <SubtractIcon w="10px" h="45px" color="primary.500" />

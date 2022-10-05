@@ -35,6 +35,7 @@ const ProductCard = (props: ProductComProps) => {
   const productlist = props.list.map((ele: ProductlistProps) => {
     const price = String(ele.price).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
+    const rank = ele.avgRate ? Number(ele.avgRate.toFixed(1)) : 0;
     return (
       <Container
         w="343px"
@@ -70,7 +71,7 @@ const ProductCard = (props: ProductComProps) => {
           <Flex alignItems="center">
             <RadiostarIcon color="primary.500" mr="3px" />
             <Heading variant="title" mr="5px">
-              {ele.avgRate}
+              {rank}
             </Heading>
             <Text color="gray.700" verticalAlign="-3px">
               리뷰 {ele.reviewCount}개

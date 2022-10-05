@@ -10,7 +10,7 @@ export interface ProductlistProps {
   capacity: number;
   thumbnail: string;
   tags: [];
-  avgRate: string;
+  avgRate: number;
   reviewCount: string;
 }
 

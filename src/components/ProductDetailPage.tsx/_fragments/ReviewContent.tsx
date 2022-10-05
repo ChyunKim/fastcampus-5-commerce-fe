@@ -23,13 +23,7 @@ const ReviewContent = (props: ReviewComProps) => {
       <Box key={ele.id}>
         <Flex justifyContent="space-between" alignItems="center">
           <Heading variant="titlesmall">{ele.nickname}</Heading>
-          <Box>
-            <RadiostarIcon boxSize={4} color="primary.500" />
-            <RadiostarIcon boxSize={4} color="primary.500" />
-            <RadiostarIcon boxSize={4} color="primary.500" />
-            <RadiostarIcon boxSize={4} color="primary.500" />
-            <RadiostarIcon boxSize={4} color="gray.400" />
-          </Box>
+          <Box>{rankReviwStar(ele.rate)}</Box>
         </Flex>
         <Text color="gray.600" fontSize="12px">
           {date}
@@ -41,6 +35,22 @@ const ReviewContent = (props: ReviewComProps) => {
     );
   });
   return <Container p="0">{reviewcontent}</Container>;
+};
+
+export const rankReviwStar = (rank: number) => {
+  const star = 5;
+  let rankarr = [];
+  for (let i = 0; i < rank; i++) {
+    rankarr[i] = 'primary.500';
+  }
+  for (let i = rank; i < star; i++) {
+    rankarr[i] = 'gray.400';
+  }
+
+  const starIcon = rankarr.map((ele) => {
+    return <RadiostarIcon boxSize={4} color={ele} />;
+  });
+  return starIcon;
 };
 
 export default ReviewContent;
