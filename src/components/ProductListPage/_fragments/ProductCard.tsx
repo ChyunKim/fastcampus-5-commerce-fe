@@ -1,8 +1,5 @@
-import type { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
 import { useRouter } from 'next/router';
 import React from 'react';
-
-import { MY_IMAGES } from '@image';
 
 import {
   Box,
@@ -20,7 +17,7 @@ import ProductDrawer from '@components/ProductDetailPage.tsx/_fragments/ProductD
 
 import { ROUTES } from '@constants/routes';
 
-import { ProductComProps, ProductlistProps } from '../ProduceListPage';
+import { ProductComProps } from '../ProduceListPage';
 
 import { RadiostarIcon } from 'generated/icons/CustomIcon';
 
@@ -32,7 +29,7 @@ const ProductCard = (props: ProductComProps) => {
   const router = useRouter();
   const { onOpen, isOpen, onClose } = useDisclosure();
 
-  const productlist = props.list.map((ele: ProductlistProps) => {
+  const productlist = props.list.map((ele) => {
     const price = String(ele.price).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
     const rank = ele.avgRate ? Number(ele.avgRate.toFixed(1)) : 0;
