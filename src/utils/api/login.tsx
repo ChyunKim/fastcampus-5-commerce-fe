@@ -1,5 +1,8 @@
 import axios from 'axios';
 
-const api = axios.create({
+export const loginapi = axios.create({
   baseURL: 'https://api.commerce.incourse.run',
+  headers: {
+    'content-type': 'application/json',
+  },
 });
