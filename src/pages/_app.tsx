@@ -1,4 +1,8 @@
+import { Provider } from 'react-redux';
+
 import { ThemeProvider, useColorMode, useTheme } from '@chakra-ui/react';
+
+import store from '@features/reducer/store';
 
 import ToggleColorModeButton from '@components/common/ToggleColorModeButton';
 
@@ -13,14 +17,16 @@ function MyApp({ Component, pageProps }: any) {
   const { colorMode } = useColorMode();
 
   return (
-    // Provide the client to your App
-    <ThemeProvider
-      theme={{ ...theme, colors: { ...theme.colors, ...mode[colorMode] } }}
-    >
-      <ToggleColorModeButton />
-      <Component {...pageProps} />
-      <ReactQueryDevtools initialIsOpen={false} />
-    </ThemeProvider>
+    <Provider store={store}>
+      // Provide the client to your App
+      <ThemeProvider
+        theme={{ ...theme, colors: { ...theme.colors, ...mode[colorMode] } }}
+      >
+        <ToggleColorModeButton />
+        <Component {...pageProps} />
+        <ReactQueryDevtools initialIsOpen={false} />
+      </ThemeProvider>
+    </Provider>
   );
 }
 
