@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useSelector } from 'react-redux';
 
 import {
   Box,
@@ -13,7 +14,9 @@ import {
   Text,
 } from '@chakra-ui/react';
 
-import NumberBox from '@components/common/@Layout/ProductLayout/NumberBox';
+import NumberBox, {
+  STOREPROPS,
+} from '@components/common/@Layout/ProductLayout/NumberBox';
 
 import { ROUTES } from '@constants/routes';
 
@@ -22,6 +25,8 @@ interface HomeHeaderDrawerProps extends Omit<DrawerProps, 'children'> {
 }
 
 const ProductDrawer = ({ bodyProps, ...basisProps }: HomeHeaderDrawerProps) => {
+  const product = useSelector((state: STOREPROPS) => state.product);
+
   return (
     <Drawer placement="bottom" {...basisProps}>
       <DrawerOverlay bg="dim.secondary" />
@@ -31,7 +36,7 @@ const ProductDrawer = ({ bodyProps, ...basisProps }: HomeHeaderDrawerProps) => {
           <Text fontSize="16px" m="5px 0">
             총수량{' '}
             <Text as="span" color="primary.500" fontWeight="700">
-              2
+              {product.quantity}
             </Text>
             개
           </Text>

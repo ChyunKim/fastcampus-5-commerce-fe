@@ -1,3 +1,5 @@
+import { stat } from 'fs';
+
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
 export interface PRODUCTSLICE_PROPS {
@@ -23,8 +25,22 @@ export const productSlice = createSlice({
       state.name = action.payload.name;
       state.price = action.payload.price;
       state.capacity = action.payload.capacity;
+      state.quantity = 1;
+    },
+    quantityIncrease: (state) => {
+      state = state;
+      state.quantity = state.quantity + 1;
+    },
+    quantityDecrease: (state) => {
+      state = state;
+      if (state.quantity === 1) return;
+      else {
+        state.quantity = state.quantity - 1;
+      }
     },
   },
 });
 
 export const { infoProduct } = productSlice.actions;
+export const { quantityIncrease } = productSlice.actions;
+export const { quantityDecrease } = productSlice.actions;
