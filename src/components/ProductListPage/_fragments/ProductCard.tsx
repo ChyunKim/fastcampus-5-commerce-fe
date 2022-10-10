@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useDispatch } from 'react-redux';
 
 import {
   Box,
@@ -13,6 +14,11 @@ import {
   Text,
   useDisclosure,
 } from '@chakra-ui/react';
+
+import {
+  PRODUCTSLICE_PROPS,
+  infoProduct,
+} from '@features/reducer/slice/productSlice';
 
 import ProductDrawer from '@components/ProductDetailPage.tsx/_fragments/ProductDrawer';
 
@@ -30,9 +36,17 @@ const ProductCard = (props: ProductComProps) => {
   const router = useRouter();
   const { onOpen, isOpen, onClose } = useDisclosure();
 
+  const dispatch = useDispatch();
+
   const productlist = props.list.map((ele) => {
     const price = String(ele.price).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-
+    const dispatchProduct: PRODUCTSLICE_PROPS = {
+      id: ele.id,
+      name: ele.name,
+      price: ele.price,
+      capacity: ele.capacity,
+      quantity: 1,
+    };
     const rank = ele.avgRate ? Number(ele.avgRate.toFixed(1)) : 0;
     return (
       <Container
@@ -45,7 +59,13 @@ const ProductCard = (props: ProductComProps) => {
         key={ele.id}
       >
         <Link href={`${ROUTES.PRODUCT.DETAIL}/${ele.id}`}>
-          <Box h="250px">
+          <Box
+            h="250px"
+            cursor="pointer"
+            onClick={() => {
+              dispatch(infoProduct(dispatchProduct));
+            }}
+          >
             <Image src={ele.thumbnail} alt={ele.name} />
           </Box>
         </Link>

@@ -18,7 +18,7 @@ const Home: NextPage = (
   props: InferGetStaticPropsType<typeof getStaticProps>,
 ) => {
   console.log(props.reviewlist);
-  const product = useSelector((state: STOREPROPS) => state.product.quantity);
+  const product = useSelector((state: STOREPROPS) => state.product);
 
   console.log(product);
   return (
