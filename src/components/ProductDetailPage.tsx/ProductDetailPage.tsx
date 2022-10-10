@@ -1,4 +1,5 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 
 import { MY_IMAGES } from '@image';
 
@@ -15,6 +16,11 @@ import {
   useDisclosure,
 } from '@chakra-ui/react';
 
+import {
+  PRODUCTSLICE_PROPS,
+  infoProduct,
+} from '@features/reducer/slice/productSlice';
+
 import ProductDrawer from './_fragments/ProductDrawer';
 import ReviewContent, { rankReviwStar } from './_fragments/ReviewContent';
 
@@ -24,7 +30,6 @@ import {
   ToggleDownIcon,
   ToggleUpIcon,
 } from 'generated/icons/CustomIcon';
-import { ProductimgIcon } from 'generated/icons/MyIcons';
 
 interface DetailContentProps {
   id: number;
@@ -61,18 +66,26 @@ const ProductDetailPage = (props: DetailComProps) => {
   const reviewRef = React.useRef<HTMLDivElement>(null);
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  console.log(props.detail);
-
+  const dispatchProduct: PRODUCTSLICE_PROPS = {
+    id: props.detail.id,
+    name: props.detail.name,
+    price: Number(props.detail.price),
+    capacity: Number(props.detail.capacity),
+    quantity: 1,
+  };
   const price = String(props.detail.price).replace(
     /\B(?=(\d{3})+(?!\d))/g,
     ',',
   );
+
+  const dispatch = useDispatch();
 
   const rank = props.detail.avgRate
     ? Number(props.detail.avgRate.toFixed(0))
     : 0;
 
   const rankreview = props.detail.avgRate ? props.detail.avgRate.toFixed(1) : 0;
+
   return (
     <Container mt="110px" mb="80px" p="0">
       <Center>
@@ -113,10 +126,23 @@ const ProductDetailPage = (props: DetailComProps) => {
           <Text color="gray.700">(리뷰 {props.detail.reviewCount}개)</Text>
         </Flex>
         <Box p="5px 0">
-          <Button variant="white_orange" mb="10px" onClick={onOpen}>
+          <Button
+            variant="white_orange"
+            mb="10px"
+            onClick={() => {
+              dispatch(infoProduct(dispatchProduct));
+              onOpen();
+            }}
+          >
             장바구니
           </Button>
-          <Button variant="orange" onClick={onOpen}>
+          <Button
+            variant="orange"
+            onClick={() => {
+              dispatch(infoProduct(dispatchProduct));
+              onOpen();
+            }}
+          >
             바로구매
           </Button>
         </Box>
