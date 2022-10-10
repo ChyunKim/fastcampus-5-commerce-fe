@@ -96,10 +96,23 @@ const ProductCard = (props: ProductComProps) => {
           </Box>
         </Box>
         <Flex justifyContent="space-around" p="0 16px">
-          <Button variant="orange" mr="10px" onClick={onOpen}>
+          <Button
+            variant="orange"
+            mr="10px"
+            onClick={() => {
+              dispatch(infoProduct(dispatchProduct));
+              onOpen();
+            }}
+          >
             바로구매
           </Button>
-          <Button variant="white_orange" onClick={onOpen}>
+          <Button
+            variant="white_orange"
+            onClick={() => {
+              dispatch(infoProduct(dispatchProduct));
+              onOpen();
+            }}
+          >
             장바구니
           </Button>
         </Flex>
