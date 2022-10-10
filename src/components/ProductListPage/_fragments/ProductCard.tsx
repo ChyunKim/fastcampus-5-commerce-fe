@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
 
@@ -43,15 +44,11 @@ const ProductCard = (props: ProductComProps) => {
         mb="30px"
         key={ele.id}
       >
-        <Box h="250px">
-          <Image
-            src={ele.thumbnail}
-            alt={ele.name}
-            onClick={() => {
-              router.push(`${ROUTES.PRODUCT.DETAIL}/${ele.id}`);
-            }}
-          />
-        </Box>
+        <Link href={`${ROUTES.PRODUCT.DETAIL}/${ele.id}`}>
+          <Box h="250px">
+            <Image src={ele.thumbnail} alt={ele.name} />
+          </Box>
+        </Link>
         <Box w="343px" p="20px 30px">
           <HStack m="10px 0">
             <Heading variant="title">{ele.name}</Heading>
