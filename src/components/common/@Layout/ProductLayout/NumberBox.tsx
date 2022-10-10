@@ -1,12 +1,22 @@
+import { useSelector } from 'react-redux';
+
 import { Box, Flex, Heading, Text } from '@chakra-ui/react';
+
+import { PRODUCTSLICE_PROPS } from '@features/reducer/slice/productSlice';
 
 import { MinusIcon, ProductPlusIcon } from 'generated/icons/CustomIcon';
 
+interface STOREPROPS {
+  product: PRODUCTSLICE_PROPS;
+}
 const NumberBox = () => {
+  const product = useSelector((state: STOREPROPS) => state.product);
+  const price = String(product.price).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
   return (
     <Box bg="gray.200" p="10px" m="0 auto" borderRadius="5px">
       <Text fontSize="16px" color="gray.600">
-        바스 & 샴푸 | 120ml
+        {product.name} | {product.capacity}ml
       </Text>
 
       <Flex m="5px 0" justifyContent="space-between" alignItems="center">
@@ -31,7 +41,7 @@ const NumberBox = () => {
             textAlign="center"
             lineHeight="23px"
           >
-            1
+            {product.quantity}
           </Box>
           <ProductPlusIcon
             bg="white"
@@ -43,7 +53,7 @@ const NumberBox = () => {
           />
         </Flex>
         <Heading variant="title" color="gray.600">
-          54,200원
+          {price}원
         </Heading>
       </Flex>
     </Box>
