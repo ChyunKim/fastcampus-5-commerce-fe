@@ -18,7 +18,6 @@ function MyApp({ Component, pageProps }: any) {
 
   return (
     <Provider store={store}>
-      // Provide the client to your App
       <ThemeProvider
         theme={{ ...theme, colors: { ...theme.colors, ...mode[colorMode] } }}
       >
