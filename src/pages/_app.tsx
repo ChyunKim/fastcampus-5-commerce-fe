@@ -17,15 +17,15 @@ function MyApp({ Component, pageProps }: any) {
   const { colorMode } = useColorMode();
 
   return (
-    // <ThemeProvider
-    //   theme={{ ...theme, colors: { ...theme.colors, ...mode[colorMode] } }}
-    // >
-    <Provider store={store}>
-      <ToggleColorModeButton />
-      <Component {...pageProps} />
-      <ReactQueryDevtools initialIsOpen={false} />
-    </Provider>
-    /* </ThemeProvider> */
+    <ThemeProvider
+      theme={{ ...theme, colors: { ...theme.colors, ...mode[colorMode] } }}
+    >
+      <Provider store={store}>
+        <ToggleColorModeButton />
+        <Component {...pageProps} />
+        <ReactQueryDevtools initialIsOpen={false} />
+      </Provider>
+    </ThemeProvider>
   );
 }
 
