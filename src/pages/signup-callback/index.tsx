@@ -7,19 +7,19 @@ import { loginapi } from '@utils/api/login';
 const SignupCallback = () => {
   const router = useRouter();
 
-  const { code, state } = router.query;
-  console.log(code, state);
-
-  const data = { code, state };
   useEffect(() => {
-    loginapi
-      .post('/v1/user/social_login/', data)
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((error) => {
-        console.log(error.response);
-      });
+    if (router.query) {
+      const data = {
+        code: router.query.code,
+        state: router.query.state,
+      };
+
+      console.log(data);
+      loginapi
+        .post('/v1/user/social_login/', data)
+        .then((res) => console.log(res))
+        .catch((error) => console.log(error.response));
+    }
   });
 
   return (
