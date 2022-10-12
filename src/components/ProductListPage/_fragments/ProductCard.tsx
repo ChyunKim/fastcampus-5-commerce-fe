@@ -20,7 +20,7 @@ import {
   infoProduct,
 } from '@features/reducer/slice/productSlice';
 
-import ProductDrawer from '@components/ProductDetailPage.tsx/_fragments/ProductDrawer';
+import ProductDrawer from '@components/ProductDetailPage/_fragments/ProductDrawer';
 
 import { ROUTES } from '@constants/routes';
 

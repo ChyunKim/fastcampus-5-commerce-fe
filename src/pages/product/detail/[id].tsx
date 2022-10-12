@@ -2,7 +2,7 @@ import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import Head from 'next/head';
 import React from 'react';
 
-import ProductDetailPage from '@components/ProductDetailPage.tsx';
+import ProductDetailPage from '@components/ProductDetailPage';
 import HomeLayout from '@components/common/@Layout/HomeLayout';
 
 import { productApi } from '@utils/api/commerce';

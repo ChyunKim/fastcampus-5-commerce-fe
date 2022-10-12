@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import React from 'react';
 
-import ShoppingCartPage from '@components/ShoppingCartPage.tsx';
+import ShoppingCartPage from '@components/ShoppingCartPage';
 import HomeLayout from '@components/common/@Layout/HomeLayout';
 
 const ProductList = () => {

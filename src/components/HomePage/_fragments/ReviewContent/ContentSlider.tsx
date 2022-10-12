@@ -6,7 +6,7 @@ import {
   HomePageProps,
   ReviewContentProps,
 } from '@components/HomePage/HomePage';
-import { rankReviwStar } from '@components/ProductDetailPage.tsx/_fragments/ReviewContent';
+import { rankReviwStar } from '@components/ProductDetailPage/_fragments/ReviewContent';
 
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';

@@ -1,4 +1,4 @@
-import SignupSuccessPage from '@components/SignupSuccessPage.tsx';
+import SignupSuccessPage from '@components/SignupSuccessPage';
 
 const signupsuccess = () => {
   return <SignupSuccessPage />;

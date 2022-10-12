@@ -17,6 +17,8 @@ const SocialLoginCallback = () => {
         .catch((error) => console.log(error.response));
     }
   });
+
+  return <></>;
 };
 
 export default SocialLoginCallback;
