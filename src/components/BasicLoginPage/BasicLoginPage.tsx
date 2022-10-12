@@ -8,7 +8,7 @@ import { SOCIAL } from '@constants/social';
 
 import { LogoIcon } from 'generated/icons/CustomIcon';
 
-const SOCIAL_REDIRECT_URL = `${CONFIG.DOMAIN}`;
+const SOCIAL_REDIRECT_URL = 'http://localhost:3000/social_login/callback';
 
 const SOCIAL_LIST: { social: SocialType; link: string } = {
   social: 'kakao',
