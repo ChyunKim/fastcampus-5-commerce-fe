@@ -1,5 +1,7 @@
+import SocialLoginPage from '@components/SocialLoginPage';
+
 const SocailLogin = () => {
-  return <></>;
+  return <SocialLoginPage />;
 };
 
 export default SocailLogin;
