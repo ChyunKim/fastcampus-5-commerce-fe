@@ -3,6 +3,8 @@ import { AxiosInstance } from 'axios';
 import instance from '@apis/_axios/instance';
 
 import {
+  UserRegisterParamType,
+  UserRegisterReturnType,
   UserSocialLoginParamType,
   UserSocialLoginReturnType,
 } from './UserApi.type';
@@ -16,6 +18,17 @@ export class UserApi {
   postSocialLogin = async (
     body: UserSocialLoginParamType,
   ): Promise<UserSocialLoginReturnType> => {
+    const { data } = await this.axios({
+      method: 'POST',
+      url: `/v1/user/social_login/`,
+      data: body,
+    });
+    return data;
+  };
+
+  postRegister = async (
+    body: UserRegisterParamType,
+  ): Promise<UserRegisterReturnType> => {
     const { data } = await this.axios({
       method: 'POST',
       url: `/v1/user/social_login/`,

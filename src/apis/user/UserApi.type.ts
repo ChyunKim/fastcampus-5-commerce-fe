@@ -9,6 +9,26 @@ export type UserSocialLoginReturnType = {
   access: String;
   refresh: String;
 };
+
+export type UserRegisterParamType = {
+  socialToken: String;
+  email: String;
+  phone: String;
+  name: String;
+  nickname: String;
+  profilePath: String;
+  gender: 'male' | 'female' | undefined;
+  age: '10' | '20' | '30' | '40' | '50' | undefined;
+  marketingAdAgree: boolean;
+};
+
+export type UserRegisterReturnType = {
+  id: number;
+  profile: String;
+  marketingAdAgree: boolean;
+  access: String;
+  refresh: String;
+};
 export type UserDTOType = {
   id: string;
 };

@@ -23,3 +23,11 @@ export const usePostSocialLoginMutation = (
     ...params?.options,
   });
 };
+
+export const usePostRegisterMutation = (
+  params?: MutationHookParams<typeof userApi.postRegister>,
+) => {
+  return useMutation(userApi.postRegister, {
+    ...params?.options,
+  });
+};
