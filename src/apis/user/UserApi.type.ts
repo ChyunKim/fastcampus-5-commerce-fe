@@ -1,8 +1,6 @@
-export type UserSocialLoginType = {
-  isRegister: boolean;
-  socialToken: String;
-  access: String;
-  refresh: String;
+export type UserSocialLoginParamType = {
+  code: string;
+  state: string;
 };
 export type UserDTOType = {
   id: string;

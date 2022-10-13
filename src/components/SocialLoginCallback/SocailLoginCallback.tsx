@@ -6,14 +6,16 @@ import { usePostSocialLoginMutation } from '@apis/user/UserApi.mutation';
 const SocialLoginCallback = () => {
   const router = useRouter();
 
-  const data = {
-    code: router.query.code,
-    state: router.query.state,
-  };
+  const { mutateAsync } = usePostSocialLoginMutation();
+
+  const { code, state } = router.query;
   useEffect(() => {
-    if (router.query) {
+    if (typeof code === 'string' && typeof state === 'string') {
+      mutateAsync({ code: code, state: state })
+        .then((res) => console.log(res))
+        .catch((error) => console.log(error));
     }
-  });
+  }, [code]);
 
   return <></>;
 };
