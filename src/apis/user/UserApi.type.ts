@@ -18,7 +18,7 @@ export type UserRegisterParamType = {
   nickname: String;
   profilePath: String;
   gender: 'male' | 'female' | undefined;
-  age: '10' | '20' | '30' | '40' | '50' | undefined;
+  age: '10' | '20' | '30' | '40' | '50' | '60' | undefined;
   marketingAdAgree: boolean;
 };
 
