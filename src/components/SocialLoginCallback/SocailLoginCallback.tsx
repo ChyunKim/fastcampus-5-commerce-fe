@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
+import { useCookies } from 'react-cookie';
 
 import { usePostSocialLoginMutation } from '@apis/user/UserApi.mutation';
 
@@ -8,7 +9,7 @@ import { ROUTES } from '@constants/routes';
 const SocialLoginCallback = () => {
   const router = useRouter();
 
-  // const [cookies, setCookie] = useCookies(['socialToken']);
+  const [cookies, setCookie] = useCookies(['socialToken']);
   const { mutateAsync: socialLogin } = usePostSocialLoginMutation();
   const { code, state } = router.query;
   useEffect(() => {
@@ -17,6 +18,7 @@ const SocialLoginCallback = () => {
         .then((res) => {
           if (res.isRegister) router.push(ROUTES.HOME);
           else {
+            setCookie('socialToken', res.socialToken);
             router.push(`${ROUTES.LOGIN.SIGNUP}`);
           }
         })
