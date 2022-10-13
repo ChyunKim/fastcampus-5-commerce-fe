@@ -16,7 +16,7 @@ const SocialLoginCallback = () => {
       socialLogin({ code: code, state: state })
         .then((res) => {
           if (res.isRegister) router.push(ROUTES.HOME);
-          else router.push(ROUTES.LOGIN.signup);
+          else router.push(ROUTES.LOGIN.SIGNUP);
         })
         .catch((error) => console.log(error));
     }

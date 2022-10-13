@@ -26,8 +26,8 @@ export const ROUTES = {
   },
   LOGIN: {
     MAIN: '/login',
-    signup: '/login/signup',
-    signupsuccess: 'login/signupsuccess',
+    SIGNUP: '/login/signup',
+    SIGNUPSUCCESS: 'login/signupsuccess',
   },
   PRODUCT: {
     MAIN: '/product',

@@ -99,8 +99,8 @@ const FormView = ({
           </Select>
         </FormCustom>
       </Box>
-      {router.asPath === ROUTES.LOGIN.signup && <AgreeSignup />}
-      {router.asPath === ROUTES.LOGIN.signup ? (
+      {router.asPath === ROUTES.LOGIN.SIGNUP && <AgreeSignup />}
+      {router.asPath === ROUTES.LOGIN.SIGNUP ? (
         <Button variant="orange" type="submit">
           회원가입 완료
         </Button>
