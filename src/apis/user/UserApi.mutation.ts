@@ -4,13 +4,13 @@ import { useMutation } from '@tanstack/react-query';
 
 import userApi from './UserApi';
 import {
-  UserDTOType,
   UserParamPatchType,
   UserParamPutType,
+  UserSocialLoginType,
 } from './UserApi.type';
 
 export const USER_API_MUTATION_KEY = {
-  POST: (param?: UserDTOType) => ['user-post', param],
+  POST: (param?: UserSocialLoginType) => ['user-post', param],
   PUT: (req?: UserParamPutType) => ['user-put', req],
   PATCH: (req?: UserParamPatchType) => ['user-patch', req],
   DELETE: (id?: string) => ['user-delete', id],
