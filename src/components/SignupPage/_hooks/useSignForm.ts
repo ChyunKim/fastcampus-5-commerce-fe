@@ -9,14 +9,8 @@ export interface FormProps {
   nickname: string;
   phone: number;
   email: string;
-  gender?: {
-    label: string;
-    value: string;
-  };
-  age?: {
-    label: string;
-    value: string;
-  };
+  gender?: 'male' | 'female';
+  age?: number;
 }
 
 export const formSchema = yup.object().shape({

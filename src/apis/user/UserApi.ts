@@ -31,7 +31,7 @@ export class UserApi {
   ): Promise<UserRegisterReturnType> => {
     const { data } = await this.axios({
       method: 'POST',
-      url: `/v1/user/social_login/`,
+      url: `/v1/user/register/`,
       data: body,
     });
     return data;
