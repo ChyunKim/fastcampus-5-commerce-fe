@@ -36,7 +36,9 @@ const FormPage = () => {
           age: Number(age),
           marketingAdAgree: true,
         };
-        userRegister(data);
+        userRegister(data)
+          .then((res) => console.log(res))
+          .catch((err) => console.log(err));
       }
     },
   );

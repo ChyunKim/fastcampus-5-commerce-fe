@@ -3,18 +3,6 @@ import { MutationHookParams } from '@apis/type';
 import { useMutation } from '@tanstack/react-query';
 
 import userApi from './UserApi';
-import {
-  UserParamPatchType,
-  UserParamPutType,
-  UserSocialLoginParamType,
-} from './UserApi.type';
-
-export const USER_API_MUTATION_KEY = {
-  POST: (param?: UserSocialLoginParamType) => ['user-post', param],
-  PUT: (req?: UserParamPutType) => ['user-put', req],
-  PATCH: (req?: UserParamPatchType) => ['user-patch', req],
-  DELETE: (id?: string) => ['user-delete', id],
-};
 
 export const usePostSocialLoginMutation = (
   params?: MutationHookParams<typeof userApi.postSocialLogin>,
@@ -28,6 +16,14 @@ export const usePostRegisterMutation = (
   params?: MutationHookParams<typeof userApi.postRegister>,
 ) => {
   return useMutation(userApi.postRegister, {
+    ...params?.options,
+  });
+};
+
+export const usePostRefreshMutation = (
+  params?: MutationHookParams<typeof userApi.postRefresh>,
+) => {
+  return useMutation(userApi.postRefresh, {
     ...params?.options,
   });
 };

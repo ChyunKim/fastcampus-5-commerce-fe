@@ -29,6 +29,16 @@ export type UserRegisterReturnType = {
   access: String;
   refresh: String;
 };
+
+export type UserRefreshParamType = {
+  refresh: String;
+};
+
+export type UserRefreshReturnType = {
+  access: String;
+  refresh: String;
+};
+
 export type UserDTOType = {
   id: string;
 };
