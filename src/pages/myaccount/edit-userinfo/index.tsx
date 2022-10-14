@@ -4,7 +4,7 @@ import React from 'react';
 import EditUserInfoPage from '@components/MyAccoutPage/_fragments/EditUserInfoPage';
 import HomeLayout from '@components/common/@Layout/HomeLayout';
 
-const MyAccount = () => {
+const UserModify = () => {
   return (
     <>
       <Head>
@@ -15,4 +15,4 @@ const MyAccount = () => {
   );
 };
 
-export default MyAccount;
+export default UserModify;

@@ -1,6 +1,6 @@
 import SignupSuccessPage from '@components/SignupSuccessPage';
 
-const signupsuccess = () => {
+const SignupSuccess = () => {
   return <SignupSuccessPage />;
 };
-export default signupsuccess;
+export default SignupSuccess;
