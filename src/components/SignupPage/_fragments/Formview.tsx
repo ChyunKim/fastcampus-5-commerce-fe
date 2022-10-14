@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { UseFormReturn } from 'react-hook-form';
 
@@ -77,8 +78,8 @@ const FormView = ({
             borderColor="gray.400"
             color="gray.400"
           >
-            <option value="woman">여자</option>
-            <option value="man">남자</option>
+            <option value="female">여자</option>
+            <option value="male">남자</option>
           </Select>
         </FormCustom>
 
@@ -91,19 +92,22 @@ const FormView = ({
             borderColor="gray.400"
             color="gray.400"
           >
-            <option value="10">10대</option>
-            <option value="20">20대</option>
-            <option value="30">30대</option>
-            <option value="40">40대</option>
-            <option value="50">50대이상</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="40">40</option>
+            <option value="50">50</option>
+            <option value="60">60</option>
           </Select>
         </FormCustom>
       </Box>
-      {router.asPath === ROUTES.LOGIN.SIGNUP && <AgreeSignup />}
-      {router.asPath === ROUTES.LOGIN.SIGNUP ? (
-        <Button variant="orange" type="submit">
-          회원가입 완료
-        </Button>
+      {router.asPath !== ROUTES.MYACCOUNT.EDITUSERINFO && <AgreeSignup />}
+      {router.asPath !== ROUTES.MYACCOUNT.EDITUSERINFO ? (
+        <Link href={ROUTES.HOME}>
+          <Button variant="orange" type="submit">
+            회원가입 완료
+          </Button>
+        </Link>
       ) : (
         <Flex>
           <Button variant="white_orange" mr="10px">
