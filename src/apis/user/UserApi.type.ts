@@ -5,38 +5,38 @@ export type UserSocialLoginParamType = {
 
 export type UserSocialLoginReturnType = {
   isRegister: boolean;
-  socialToken: String;
-  access: String;
-  refresh: String;
+  socialToken: string;
+  access: string;
+  refresh: string;
 };
 
 export type UserRegisterParamType = {
   socialToken: String;
-  email: String;
-  phone: String;
-  name: String;
-  nickname: String;
-  profilePath: String;
-  gender: String;
+  email: string;
+  phone: string;
+  name: string;
+  nickname: string;
+  profilePath: string;
+  gender: string;
   age: number;
   marketingAdAgree: boolean;
 };
 
 export type UserRegisterReturnType = {
   id: number;
-  profile: String;
+  profile: string;
   marketingAdAgree: boolean;
-  access: String;
-  refresh: String;
+  access: string;
+  refresh: string;
 };
 
 export type UserRefreshParamType = {
-  refresh: String;
+  refresh: string;
 };
 
 export type UserRefreshReturnType = {
-  access: String;
-  refresh: String;
+  access: string;
+  refresh: string;
 };
 
 export type UserDTOType = {

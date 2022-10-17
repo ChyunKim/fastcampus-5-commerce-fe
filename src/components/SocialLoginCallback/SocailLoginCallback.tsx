@@ -7,6 +7,7 @@ import {
 } from '@apis/user/UserApi.mutation';
 
 import { ROUTES } from '@constants/routes';
+import { setToken } from '@utils/localStorage/token';
 
 const SocialLoginCallback = () => {
   const router = useRouter();
@@ -19,10 +20,11 @@ const SocialLoginCallback = () => {
       socialLogin({ code: code, state: state })
         .then((res) => {
           if (res.isRegister) {
-            tokenRefresh({ refresh: res.refresh })
-              .then((res) => console.log(res))
-              .catch((err) => console.log(err));
-            router.push(ROUTES.HOME);
+            const { access, refresh } = res;
+            if (access && refresh) {
+              setToken({ access: access, refresh: refresh, isRegister: true });
+              router.push(ROUTES.HOME);
+            }
           } else {
             router.push(
               `${ROUTES.LOGIN.SIGNUP}?socialToken=${res.socialToken}`,
