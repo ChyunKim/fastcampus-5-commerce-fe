@@ -39,17 +39,16 @@ export type UserRefreshReturnType = {
   refresh: string;
 };
 
-export type UserDTOType = {
-  id: string;
+export type UserMeParamType = {
+  accessToken: string;
 };
-export type UserParamGetType = {
-  id: string;
-};
-export type UserParamPutType = {
-  id: string;
-  data: UserDTOType;
-};
-export type UserParamPatchType = {
-  id: string;
-  data: Partial<UserDTOType>;
+export type UserMeReturnType = {
+  id: number;
+  name: string;
+  nickname: string;
+  phone: string;
+  email: string;
+  profile: string;
+  gender: string;
+  age: number;
 };
