@@ -2,7 +2,10 @@ import Link from 'next/link';
 
 import { Box, Container, Flex, Heading, Text, VStack } from '@chakra-ui/react';
 
+import { useGetUserMeQuery } from '@apis/user/UserApi.query';
+
 import { ROUTES } from '@constants/routes';
+import { getToken } from '@utils/localStorage/token';
 
 import {
   ListarrowIcon,
@@ -12,12 +15,16 @@ import {
 } from 'generated/icons/CustomIcon';
 
 const MyAccountPage = () => {
+  const { data } = useGetUserMeQuery({
+    variables: { accessToken: getToken()?.access! },
+  });
+
   return (
     <Container mt="150px" mb="30px" p="0">
       <Box p=" 0 16px" borderBottom="10px solid" borderColor="gray.200">
-        <Heading variant="title">김인코스런</Heading>
+        <Heading variant="title">{data?.name}</Heading>
         <Text color="gray.400" mb="30px">
-          incourse.run@gmail.com
+          {data?.email}
         </Text>
       </Box>
       <Flex
