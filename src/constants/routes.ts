@@ -44,5 +44,6 @@ export const ROUTES = {
     MAIN: '/myaccount',
     EDITUSERINFO: '/myaccount/edit-userinfo',
     ORDERLIST: '/myaccount/order-list',
+    WITHDRAWAL: '/user-withdrawal',
   },
 } as const;

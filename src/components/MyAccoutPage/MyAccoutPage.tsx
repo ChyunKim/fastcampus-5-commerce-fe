@@ -51,26 +51,32 @@ const MyAccountPage = () => {
           <Text color="gray.800">내 상품 리뷰</Text>
         </VStack>
       </Flex>
-      <Flex
-        p="16px"
-        justifyContent="space-between"
-        alignItems="center"
-        borderBottom="1px solid"
-        borderColor="gray.200"
-      >
-        <Text> 회원탈퇴</Text>
-        <ListarrowIcon boxSize={6} />
-      </Flex>
-      <Flex
-        p="16px"
-        justifyContent="space-between"
-        alignItems="center"
-        borderBottom="1px solid"
-        borderColor="gray.200"
-      >
-        <Text> 로그아웃</Text>
-        <ListarrowIcon boxSize={6} />
-      </Flex>
+      <Link href={ROUTES.MYACCOUNT.WITHDRAWAL}>
+        <Flex
+          p="16px"
+          justifyContent="space-between"
+          alignItems="center"
+          borderBottom="1px solid"
+          borderColor="gray.200"
+          cursor="pointer"
+        >
+          <Text> 회원탈퇴</Text>
+          <ListarrowIcon boxSize={6} />
+        </Flex>
+      </Link>
+      <Link href={ROUTES.LOGIN.MAIN}>
+        <Flex
+          p="16px"
+          justifyContent="space-between"
+          alignItems="center"
+          borderBottom="1px solid"
+          borderColor="gray.200"
+          cursor="pointer"
+        >
+          <Text> 로그아웃</Text>
+          <ListarrowIcon boxSize={6} />
+        </Flex>
+      </Link>
     </Container>
   );
 };
