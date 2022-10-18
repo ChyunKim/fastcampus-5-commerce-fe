@@ -1,4 +1,17 @@
-import { Box, Container, HStack, Heading, Text } from '@chakra-ui/react';
+import React from 'react';
+
+import {
+  Box,
+  Button,
+  Container,
+  HStack,
+  Heading,
+  Input,
+  Radio,
+  RadioGroup,
+  Stack,
+  Text,
+} from '@chakra-ui/react';
 
 import { useGetUserMeQuery } from '@apis/user/UserApi.query';
 
@@ -8,6 +21,8 @@ const UserWithdrawalPage = () => {
   const { data } = useGetUserMeQuery({
     variables: { accessToken: getToken()?.access! },
   });
+  const [value, setValue] = React.useState('아이디 변경(재가입)');
+
   return (
     <Container mt="130px">
       <Heading variant="titlelarge">회원탈퇴</Heading>
@@ -45,7 +60,46 @@ const UserWithdrawalPage = () => {
       <Box p="14px 0">
         <Heading variant="title">탈퇴사유</Heading>
       </Box>
-      <Box></Box>
+      <RadioGroup onChange={setValue} value={value}>
+        <Stack>
+          <Radio size="md" value="아이디 변경(재가입)" colorScheme="orange">
+            아이디 변경(재가입)
+          </Radio>
+          <Radio size="md" value="낮은 구매 빈도" colorScheme="orange">
+            낮은 구매 빈도
+          </Radio>
+          <Radio
+            size="md"
+            value="서비스 및 고객지원 불만족"
+            colorScheme="orange"
+          >
+            서비스 및 고객지원 불만족
+          </Radio>
+          <Radio size="md" value="타 브랜드 이용" colorScheme="orange">
+            타 브랜드 이용
+          </Radio>
+          <Radio size="md" value="기타" colorScheme="orange">
+            기타
+          </Radio>
+          <Input
+            variant="formstyled"
+            placeholder="사유를 입력하세요."
+            fontSize="16px"
+          ></Input>
+        </Stack>
+      </RadioGroup>
+      <Box mt="40px" p="14px 0">
+        <Heading variant="title">인코스런을 입력하세요.</Heading>
+      </Box>
+      <Input
+        variant="formstyled"
+        placeholder="인코스런"
+        fontSize="16px"
+      ></Input>
+      <HStack mt="80px" mb="30px">
+        <Button variant="white_orange">취소</Button>
+        <Button variant="orange">탈퇴하기</Button>
+      </HStack>
     </Container>
   );
 };
