@@ -11,6 +11,7 @@ import {
   UserRegisterReturnType,
   UserSocialLoginParamType,
   UserSocialLoginReturnType,
+  UserWithDrawalParamType,
 } from './UserApi.type';
 
 export class UserApi {
@@ -59,6 +60,13 @@ export class UserApi {
       headers: {
         Authorization: `Bearer ${params.accessToken}`,
       },
+    });
+    return data;
+  };
+  deleteUser = async (params: UserWithDrawalParamType) => {
+    const { data } = await this.axios({
+      method: 'DELETE',
+      url: `/v1/user/withdrawal/${params.id}/`,
     });
     return data;
   };

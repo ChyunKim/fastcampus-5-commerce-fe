@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import React from 'react';
 
 import {
@@ -9,11 +10,7 @@ import {
   Heading,
   Input,
   Modal,
-  ModalBody,
-  ModalCloseButton,
   ModalContent,
-  ModalFooter,
-  ModalHeader,
   ModalOverlay,
   Radio,
   RadioGroup,
@@ -25,6 +22,7 @@ import {
 
 import { useGetUserMeQuery } from '@apis/user/UserApi.query';
 
+import { ROUTES } from '@constants/routes';
 import { getToken } from '@utils/localStorage/token';
 
 const UserWithdrawalPage = () => {
@@ -33,7 +31,7 @@ const UserWithdrawalPage = () => {
   });
   const [value, setValue] = React.useState('아이디 변경(재가입)');
   const { isOpen, onOpen, onClose } = useDisclosure();
-
+  const router = useRouter();
   return (
     <Container mt="130px">
       <Heading variant="titlelarge">회원탈퇴</Heading>
@@ -108,7 +106,12 @@ const UserWithdrawalPage = () => {
         fontSize="16px"
       ></Input>
       <HStack mt="80px" mb="30px">
-        <Button variant="white_orange">취소</Button>
+        <Button
+          variant="white_orange"
+          onClick={() => router.push(ROUTES.MYACCOUNT.MAIN)}
+        >
+          취소
+        </Button>
         <Button variant="orange" onClick={onOpen}>
           탈퇴하기
         </Button>

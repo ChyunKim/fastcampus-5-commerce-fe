@@ -27,3 +27,11 @@ export const usePostRefreshMutation = (
     ...params?.options,
   });
 };
+
+export const useDeleteUserMutation = (
+  params?: MutationHookParams<typeof userApi.deleteUser>,
+) => {
+  return useMutation(userApi.deleteUser, {
+    ...params?.options,
+  });
+};

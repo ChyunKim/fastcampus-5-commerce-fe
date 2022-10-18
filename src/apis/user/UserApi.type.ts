@@ -52,3 +52,7 @@ export type UserMeReturnType = {
   gender: string;
   age: number;
 };
+
+export type UserWithDrawalParamType = {
+  id: number;
+};
