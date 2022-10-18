@@ -20,6 +20,7 @@ import {
   useDisclosure,
 } from '@chakra-ui/react';
 
+import { useDeleteUserMutation } from '@apis/user/UserApi.mutation';
 import { useGetUserMeQuery } from '@apis/user/UserApi.query';
 
 import { ROUTES } from '@constants/routes';
@@ -29,9 +30,12 @@ const UserWithdrawalPage = () => {
   const { data } = useGetUserMeQuery({
     variables: { accessToken: getToken()?.access! },
   });
+
   const [value, setValue] = React.useState('아이디 변경(재가입)');
   const { isOpen, onOpen, onClose } = useDisclosure();
   const router = useRouter();
+  const { mutateAsync: deleteMe } = useDeleteUserMutation();
+  const id = data?.id;
   return (
     <Container mt="130px">
       <Heading variant="titlelarge">회원탈퇴</Heading>
@@ -54,7 +58,6 @@ const UserWithdrawalPage = () => {
             핸드폰번호
           </Text>
           <Text color="gray.700">
-            {' '}
             {data?.phone.slice(0, 3)}-{data?.phone.slice(3, 7)}-
             {data?.phone.slice(7, 11)}
           </Text>
@@ -112,7 +115,14 @@ const UserWithdrawalPage = () => {
         >
           취소
         </Button>
-        <Button variant="orange" onClick={onOpen}>
+        <Button
+          variant="orange"
+          onClick={() => {
+            console.log(typeof data?.id, data?.id);
+            id && deleteMe({ id }).then((res) => console.log(res));
+            onOpen();
+          }}
+        >
           탈퇴하기
         </Button>
         <Modal isOpen={isOpen} onClose={onClose}>

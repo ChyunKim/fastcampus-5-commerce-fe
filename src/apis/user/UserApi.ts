@@ -63,10 +63,11 @@ export class UserApi {
     });
     return data;
   };
-  deleteUser = async (params: UserWithDrawalParamType) => {
+  deleteUser = async (params: UserWithDrawalParamType): Promise<void> => {
+    const { id } = params;
     const { data } = await this.axios({
       method: 'DELETE',
-      url: `/v1/user/withdrawal/${params.id}/`,
+      url: `/v1/user/withdrawal/${id}/`,
     });
     return data;
   };
