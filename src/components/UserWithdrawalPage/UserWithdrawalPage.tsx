@@ -3,14 +3,24 @@ import React from 'react';
 import {
   Box,
   Button,
+  Center,
   Container,
   HStack,
   Heading,
   Input,
+  Modal,
+  ModalBody,
+  ModalCloseButton,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  ModalOverlay,
   Radio,
   RadioGroup,
   Stack,
   Text,
+  VStack,
+  useDisclosure,
 } from '@chakra-ui/react';
 
 import { useGetUserMeQuery } from '@apis/user/UserApi.query';
@@ -22,6 +32,7 @@ const UserWithdrawalPage = () => {
     variables: { accessToken: getToken()?.access! },
   });
   const [value, setValue] = React.useState('아이디 변경(재가입)');
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <Container mt="130px">
@@ -98,7 +109,24 @@ const UserWithdrawalPage = () => {
       ></Input>
       <HStack mt="80px" mb="30px">
         <Button variant="white_orange">취소</Button>
-        <Button variant="orange">탈퇴하기</Button>
+        <Button variant="orange" onClick={onOpen}>
+          탈퇴하기
+        </Button>
+        <Modal isOpen={isOpen} onClose={onClose}>
+          <ModalOverlay w="375px" />
+          <ModalContent w="343px" h="300px">
+            <Center>
+              <VStack mt="110px">
+                <Heading variant="title" mb="80px">
+                  탈퇴가 완료되었습니다.
+                </Heading>
+                <Button variant="orange" onClick={onClose}>
+                  확인
+                </Button>
+              </VStack>
+            </Center>
+          </ModalContent>
+        </Modal>
       </HStack>
     </Container>
   );
